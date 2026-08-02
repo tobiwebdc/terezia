@@ -1,0 +1,10 @@
+<header class="site-header">
+  <a class="site-header__logo" href="/">
+    {% if site.logo %}
+      <img src="{{ site.logo }}" alt="{{ site.site_name | default('Logo') }}">
+    {% else %}
+      <span>{{ site.site_name | default("Site name") }}</span>
+    {% endif %}
+  </a>
+  {% include "partials/nav.njk" %}
+</header>

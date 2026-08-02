@@ -1,0 +1,9 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title | default(site.site_name) | default("Web") }} | {{ site.site_name | default("") }}</title>
+<meta name="description" content="{{ seo_description | default(site.site_name) | default('') }}">
+
+<meta property="og:title" content="{{ title | default(site.site_name) | default('') }}">
+<meta property="og:description" content="{{ seo_description | default('') }}">
+<meta property="og:type" content="website">
+{% if image %}<meta property="og:image" content="{{ image }}">{% endif %}

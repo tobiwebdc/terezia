@@ -1,0 +1,11 @@
+{
+  "site_name": "Ukázková firma s.r.o.",
+  "logo": "/assets/images/logo.svg",
+  "contact_email": "info@example.com",
+  "phone": "+420 123 456 789",
+  "address": "Ulice 1, 700 30 Ostrava",
+  "social_links": [
+    { "label": "Facebook", "url": "https://facebook.com/example" },
+    { "label": "Instagram", "url": "https://instagram.com/example" }
+  ]
+}

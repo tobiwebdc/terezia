@@ -1,0 +1,65 @@
+# Template for Decap CMS config.yml.
+# admin-hub renders a concrete config per client at runtime (Phase 3):
+# it substitutes {{REPO}} / {{BASE_URL}} and serves the result, it does NOT
+# get committed into individual client repos.
+
+backend:
+  name: github
+  repo: "{{REPO}}"          # e.g. org/client-acme
+  branch: main
+  base_url: "{{BASE_URL}}"  # branded OAuth proxy origin, e.g. https://admin.example.com
+  auth_endpoint: auth
+
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Stránky"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: false, hint: "Necháno prázdné = generuje se z title" }
+      - { label: "Obsah", name: "body", widget: "markdown", required: false }
+      - { label: "Obrázek", name: "image", widget: "image", required: false }
+      - { label: "SEO popisek", name: "seo_description", widget: "text", required: false }
+
+  - name: "products"
+    label: "Produkty"
+    folder: "src/content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Název", name: "name", widget: "string", required: true }
+      - { label: "Popis", name: "description", widget: "markdown", required: false }
+      - { label: "Cena", name: "price", widget: "string", required: false, hint: "Pouze zobrazovací hodnota, žádná e-shop logika" }
+      - label: "Obrázky"
+        name: "images"
+        widget: "list"
+        minimize_collapsed: true
+        field: { label: "Obrázek", name: "image", widget: "image" }
+      - { label: "Kategorie", name: "category", widget: "string", required: false }
+      - { label: "Viditelný", name: "visible", widget: "boolean", default: true }
+
+  - name: "settings"
+    label: "Nastavení webu"
+    files:
+      - name: "site"
+        label: "Site settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Název webu", name: "site_name", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image", required: false }
+          - { label: "Kontaktní e-mail", name: "contact_email", widget: "string", required: false }
+          - { label: "Telefon", name: "phone", widget: "string", required: false }
+          - { label: "Adresa", name: "address", widget: "text", required: false }
+          - label: "Sociální sítě"
+            name: "social_links"
+            widget: "list"
+            required: false
+            field:
+              fields:
+                - { label: "Popisek", name: "label", widget: "string" }
+                - { label: "URL", name: "url", widget: "string" }
