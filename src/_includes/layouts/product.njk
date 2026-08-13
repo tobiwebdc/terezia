@@ -7,7 +7,7 @@ layout: layouts/base.njk
   {% if images and images.length %}
     <div class="product__gallery">
       {% for img in images %}
-        <img src="{{ img }}" alt="{{ name | default(title) }}">
+        <img src="{{ img | url }}" alt="{{ name | default(title) }}">
       {% endfor %}
     </div>
   {% endif %}

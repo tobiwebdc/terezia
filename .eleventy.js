@@ -27,6 +27,12 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    // Empty by default (assumes the site runs at its own domain root, per
+    // the "portable to any hosting" requirement). For testing on the bare
+    // github.io/<repo>/ subpath before a custom domain is set up, set the
+    // PATH_PREFIX repo variable (Settings → Secrets and variables →
+    // Actions → Variables) to "/<repo-name>/" — see deploy.yml.
+    pathPrefix: process.env.PATH_PREFIX || "/",
     dir: {
       input: "src",
       output: "_site",
