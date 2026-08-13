@@ -27,20 +27,23 @@ src/assets/css/theme.css   (klient si tu může přepsat proměnné z base.css)
 
 `src/_data/site.json` v tomto core repu je jen vývojový placeholder, aby šlo
 repo samostatně buildit a testovat layouty — v client repu ho nahrazuje
-skutečná konfigurace daného klienta editovaná přes Decap CMS.
+skutečná konfigurace daného klienta editovaná přes admin-hub CMS rozhraní
+(aktuálně Sveltia CMS, viz `admin-hub/README.md`).
 
 ## Content model
 
 Definice polí (Pages, Products, Site settings) žije jako zdroj pravdy v
-`decap-cms/config.yml.template`. admin-hub (Fáze 2–3) z něj generuje konkrétní
-`config.yml` per klient (dosadí `repo` a `base_url`) — tenhle soubor se
-necommituje do client repa, servíruje ho hub dynamicky podle přihlášeného
-klienta.
+`cms-admin/config.yml.template`. Je to obyčejný Decap-kompatibilní YAML
+formát, který umí přečíst víc CMS frontendů (aktuálně používáme Sveltia CMS
+kvůli modernějšímu UI a aktivnímu vývoji — Decap sám o sobě už oficiálně
+není udržovaný). admin-hub (Fáze 2–3) z něj generuje konkrétní `config.yml`
+per klient (dosadí `repo` a `base_url`) — tenhle soubor se necommituje do
+client repa, servíruje ho hub dynamicky podle přihlášeného klienta.
 
 **Zpětná kompatibilita:** všechna pole v šablonách (`seo.njk`, `footer.njk`,
 `page.njk`, `product.njk`) používají Nunjucks `default` filter. Když někdy
 přidáme do content modelu nové pole, starší klienti bez migrace nespadnou —
-jen se jim nezobrazí dokud pole v Decapu nevyplní.
+jen se jim nezobrazí, dokud ho někdo v administraci nevyplní.
 
 ## Vývoj
 
