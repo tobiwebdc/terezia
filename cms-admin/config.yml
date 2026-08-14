@@ -1,0 +1,117 @@
+backend:
+  name: github
+  repo: tvuj-ucet/nazev-repozitare # TODO: doplnit skutečný repozitář zákazníka
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Obsah webu"
+    files:
+      - name: "site"
+        label: "Stránka"
+        file: "src/_data/site.json"
+        fields:
+          - label: "Sociální sítě"
+            name: "social_links"
+            widget: "list"
+            max: 1
+            min: 1
+            fields:
+              - { label: "Facebook (URL)", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram (URL)", name: "instagram", widget: "string", required: false }
+              - { label: "Fler (URL)", name: "fler", widget: "string", required: false }
+
+          - label: "Meta"
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: "Titulek stránky (tag title)", name: "title", widget: "string" }
+              - { label: "Popis (meta description)", name: "description", widget: "text" }
+
+          - label: "Hero sekce"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow (malý text nad nadpisem)", name: "eyebrow", widget: "string" }
+              - { label: "Hlavní nadpis / jméno ateliéru", name: "title", widget: "string" }
+              - { label: "Podnadpis", name: "subtitle", widget: "string" }
+              - { label: "Text hlavního tlačítka", name: "ctaPrimary", widget: "string" }
+              - { label: "Text vedlejšího tlačítka", name: "ctaSecondary", widget: "string" }
+
+          - label: "O mně"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Nadpis", name: "heading", widget: "string" }
+              - { label: "Text (1. odstavec)", name: "text", widget: "text" }
+              - { label: "Text (2. odstavec)", name: "text2", widget: "text" }
+              - { label: "Citát", name: "quote", widget: "string" }
+
+          - label: "Sekce Výroba"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Nadpis", name: "heading", widget: "string" }
+              - { label: "1. sloupec — popisek", name: "caption", widget: "string" }
+              - { label: "1. sloupec — text", name: "text", widget: "text" }
+              - { label: "2. sloupec — popisek", name: "caption1", widget: "string" }
+              - { label: "2. sloupec — text", name: "text1", widget: "text" }
+              - { label: "3. sloupec — popisek", name: "caption2", widget: "string" }
+              - { label: "3. sloupec — text", name: "text2", widget: "text" }
+
+          - label: "Produkty"
+            name: "products"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Nadpis (kolekce k prodeji)", name: "heading", widget: "string" }
+              - { label: "Text pod nadpisem", name: "text", widget: "text" }
+              - label: "Kolekce k prodeji"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.name}} — {{fields.price}}"
+                fields: &product_fields
+                  - { label: "Název", name: "name", widget: "string" }
+                  - { label: "Popis", name: "desc", widget: "text" }
+                  - { label: "Popis (pokračování 1)", name: "desc1", widget: "text", required: false }
+                  - { label: "Popis (pokračování 2)", name: "desc2", widget: "text", required: false }
+                  - { label: "Vhodné pro", name: "type", widget: "string" }
+                  - { label: "Barva", name: "color", widget: "string" }
+                  - { label: "Materiál", name: "material", widget: "string" }
+                  - { label: "Velikost", name: "size", widget: "text" }
+                  - { label: "Cena", name: "price", widget: "string" }
+                  - label: "Fotografie (hlavní + náhledy)"
+                    name: "images"
+                    widget: "list"
+                    required: false
+                    field: { label: "Fotka", name: "image", widget: "image" }
+              - { label: "Nadpis (na objednání)", name: "heading1", widget: "string" }
+              - { label: "Text pod nadpisem (na objednání)", name: "text1", widget: "text" }
+              - label: "Klobouky na objednání / inspirace"
+                name: "items1"
+                widget: "list"
+                summary: "{{fields.name}} — {{fields.price}}"
+                fields: *product_fields
+
+          - label: "Kontakt"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Nadpis", name: "heading", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "E-mail", name: "email", widget: "string" }
+              - { label: "Telefon", name: "phone", widget: "string" }
+              - { label: "Adresa", name: "address", widget: "string" }
+              - { label: "IČO", name: "ico", widget: "string" }
+
+          - label: "Patička"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Text v patičce", name: "text", widget: "string" }

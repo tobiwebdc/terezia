@@ -1,0 +1,42 @@
+{% macro productCard(product, idx, sold) %}
+{% set v = ["coral", "mustard", "sage"] %}
+{% set m = v[idx % 3] %}
+{% set t1 = v[(idx + 1) % 3] %}
+{% set t2 = v[(idx + 2) % 3] %}
+{% if product.images and product.images.length > 0 %}
+  {% set imgList = product.images | map(attribute="image") | list %}
+{% else %}
+  {% set imgList = ["/images/placeholders/placeholder-" + m + ".svg", "/images/placeholders/placeholder-" + t1 + ".svg", "/images/placeholders/placeholder-" + t2 + ".svg"] %}
+{% endif %}
+<div class="product-card" data-images='{{ imgList | dump | safe }}'>
+  <script type="application/json" class="product-data">{{ product | dump | safe }}</script>
+
+  <button type="button" class="product-img-btn group block w-full aspect-[4/5] overflow-hidden border border-ink/10 relative" data-index="0">
+    <img src="{{ imgList[0] }}" alt="{{ product.name }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+    {% if sold %}
+    <span class="absolute top-3 left-3 label-caps bg-ink/80 text-cream px-3 py-1">Prodáno</span>
+    {% endif %}
+  </button>
+
+  <div class="flex gap-2 mt-2">
+    {% for img in imgList %}
+      {% if loop.index0 > 0 and loop.index0 < 3 %}
+      <button type="button" class="product-img-btn w-14 h-14 border border-ink/10 overflow-hidden" data-index="{{ loop.index0 }}">
+        <img src="{{ img }}" alt="" class="w-full h-full object-cover" />
+      </button>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="mt-4">
+    <h3 class="font-display font-medium text-lg leading-snug">{{ product.name }}</h3>
+    <p class="font-body text-ink/70 text-sm mt-1 line-clamp-2">{{ product.desc }}</p>
+    <div class="flex items-center justify-between mt-3 gap-3">
+      <span class="label-caps text-coral">{{ product.price }}</span>
+      <button type="button" class="product-details-btn label-caps text-ink/50 hover:text-coral underline underline-offset-4 shrink-0" data-index="0">
+        Detail a foto
+      </button>
+    </div>
+  </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /*
+    Barvy z loga "Klobouky Terezia" — hodnoty jsou R G B (bez rgb()),
+    aby fungovaly Tailwind opacity modifikátory jako bg-coral/80.
+    Uprav klidně přímo tady, projeví se to v celém webu.
+  */
+  :root {
+    --color-coral: 226 56 90; /* #E2385A */
+    --color-mustard: 240 189 42; /* #F0BD2A */
+    --color-sage: 159 200 159; /* #9FC89F */
+    --color-cream: 255 237 202; /* #FFEDCA */
+    --color-ink: 43 36 30; /* #2B241E — tmavý text, v logu není, zvoleno pro kontrast */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: theme(fontFamily.body);
+  }
+}
+
+@layer components {
+  .label-caps {
+    @apply font-label uppercase tracking-widest2 text-xs;
+  }
+
+  .deco-frame {
+    @apply relative border border-coral/40;
+  }
+  .deco-frame::before,
+  .deco-frame::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid theme(colors.coral);
+  }
+  .deco-frame::before {
+    top: -6px;
+    left: -6px;
+    border-right: none;
+    border-bottom: none;
+  }
+  .deco-frame::after {
+    bottom: -6px;
+    right: -6px;
+    border-left: none;
+    border-top: none;
+  }
+
+  /* Pruhovaný motiv přímo z loga — používá se jako opakující se signature prvek */
+  .stripe-band {
+    background: repeating-linear-gradient(
+      90deg,
+      rgb(var(--color-sage)) 0 40px,
+      rgb(var(--color-cream)) 40px 52px,
+      rgb(var(--color-coral)) 52px 92px,
+      rgb(var(--color-cream)) 92px 104px,
+      rgb(var(--color-mustard)) 104px 144px,
+      rgb(var(--color-cream)) 144px 156px
+    );
+  }
+}
