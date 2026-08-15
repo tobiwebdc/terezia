@@ -5,8 +5,8 @@
 {% set t2 = v[(idx + 2) % 3] %}
 {% if product.images and product.images.length > 0 %}
   {% set rawImgList = [] %}
-  {% for imgObj in product.images %}
-    {% set rawImgList = (rawImgList.push(imgObj.image), rawImgList) %}
+  {% for imgPath in product.images %}
+    {% set rawImgList = (rawImgList.push(imgPath), rawImgList) %}
   {% endfor %}
 {% else %}
   {% set rawImgList = ["/assets/images/placeholders/placeholder-" + m + ".svg", "/assets/images/placeholders/placeholder-" + t1 + ".svg", "/assets/images/placeholders/placeholder-" + t2 + ".svg"] %}
