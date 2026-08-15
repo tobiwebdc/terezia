@@ -1,26 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Definice vlastních hodnot tématu přímo v CSS (Tailwind v4) */
+@theme {
+  /* Definice vašeho fontu body */
+  --font-body: 'Inter', sans-serif; /* Dosadte váš požadovaný font */
+  --font-label: "Montserrat", sans-serif;
+  --tracking-widest2: 0.25em; /* Hodnotu si upravte dle potřeby */
+  
+  /* Definice vlastních barev pro funkci theme() nebo @apply */
+  --color-coral: rgb(226 56 90);
+  --color-mustard: rgb(240 189 42);
+  --color-sage: rgb(159 200 159);
+  --color-cream: rgb(255 237 202);
+  --color-ink: rgb(43 36 30);
+}
 
 @layer base {
-  /*
-    Barvy z loga "Klobouky Terezia" — hodnoty jsou R G B (bez rgb()),
-    aby fungovaly Tailwind opacity modifikátory jako bg-coral/80.
-    Uprav klidně přímo tady, projeví se to v celém webu.
-  */
   :root {
-    --color-coral: 226 56 90; /* #E2385A */
-    --color-mustard: 240 189 42; /* #F0BD2A */
-    --color-sage: 159 200 159; /* #9FC89F */
-    --color-cream: 255 237 202; /* #FFEDCA */
-    --color-ink: 43 36 30; /* #2B241E — tmavý text, v logu není, zvoleno pro kontrast */
+    --color-coral-raw: 226 56 90;
+    --color-mustard-raw: 240 189 42;
+    --color-sage-raw: 159 200 159;
+    --color-cream-raw: 255 237 202;
+    --color-ink-raw: 43 36 30;
   }
 
   html {
     scroll-behavior: smooth;
   }
   body {
-    font-family: theme(fontFamily.body);
+    /* V v4 použijeme přímo CSS proměnnou fontu */
+    font-family: var(--font-body);
   }
 }
 
@@ -38,7 +47,8 @@
     position: absolute;
     width: 14px;
     height: 14px;
-    border: 1px solid theme(colors.coral);
+    /* Místo theme(colors.coral) použijeme var() nebo zpětné náhradní řešení */
+    border: 1px solid var(--color-coral);
   }
   .deco-frame::before {
     top: -6px;
@@ -53,16 +63,15 @@
     border-top: none;
   }
 
-  /* Pruhovaný motiv přímo z loga — používá se jako opakující se signature prvek */
   .stripe-band {
     background: repeating-linear-gradient(
       90deg,
-      rgb(var(--color-sage)) 0 40px,
-      rgb(var(--color-cream)) 40px 52px,
-      rgb(var(--color-coral)) 52px 92px,
-      rgb(var(--color-cream)) 92px 104px,
-      rgb(var(--color-mustard)) 104px 144px,
-      rgb(var(--color-cream)) 144px 156px
+      rgb(var(--color-sage-raw)) 0 40px,
+      rgb(var(--color-cream-raw)) 40px 52px,
+      rgb(var(--color-coral-raw)) 52px 92px,
+      rgb(var(--color-cream-raw)) 92px 104px,
+      rgb(var(--color-mustard-raw)) 104px 144px,
+      rgb(var(--color-cream-raw)) 144px 156px
     );
   }
 }

@@ -6,10 +6,13 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "debug": "DEBUG=Eleventy* eleventy"
+    "debug": "DEBUG=Eleventy* eleventy",
+    "css-watch": "npx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/base.css --watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "luxon": "^3.7.2"
+    "luxon": "^3.7.2",
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
   }
 }

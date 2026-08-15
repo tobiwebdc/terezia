@@ -6,7 +6,7 @@
 {% if product.images and product.images.length > 0 %}
   {% set imgList = product.images | map(attribute="image") | list %}
 {% else %}
-  {% set imgList = ["/images/placeholders/placeholder-" + m + ".svg", "/images/placeholders/placeholder-" + t1 + ".svg", "/images/placeholders/placeholder-" + t2 + ".svg"] %}
+  {% set imgList = ["/assets/images/placeholders/placeholder-" + m + ".svg", "/assets/images/placeholders/placeholder-" + t1 + ".svg", "/assets/images/placeholders/placeholder-" + t2 + ".svg"] %}
 {% endif %}
 <div class="product-card" data-images='{{ imgList | dump | safe }}'>
   <script type="application/json" class="product-data">{{ product | dump | safe }}</script>

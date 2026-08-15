@@ -1,5 +1,0 @@
-{
-  "layout": "layouts/page.njk",
-  "tags": "pages",
-  "permalink": "{% set homeSlugs = ['domu', 'domů', 'domovska-stranka', 'domovská-stránka', 'domov', 'home', 'index', 'uvod', 'úvod'] %}{% if (slug | lower) in homeSlugs %}/{% else %}/{{ slug | default(title | slugify) }}/{% endif %}"
-}
