@@ -5,27 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title or meta.title }}</title>
   <meta name="description" content="{{ description or meta.description }}" />
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Fredoka:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}" />
 </head>
 <body class="bg-cream text-ink antialiased">
   
   <!-- NAV -->
   <header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-cream/95 border-b border-coral/20 transition-shadow duration-300">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="/" class="flex items-center gap-2 text-coral">
-        <img src="/assets/favicon.svg" class="w-6 h-6">
+      <a href="{{ '/' | url }}" class="flex items-center gap-2 text-coral">
+        <img src="{{ '/assets/favicon.svg' | url }}" class="w-6 h-6">
         <span class="font-script text-xl">Klobouky Terezia</span>
       </a>
       <div class="flex items-center gap-6">
         <nav class="hidden sm:flex gap-8 label-caps text-ink/70">
-          <a href="/#o-mne" class="hover:text-coral transition-colors">O mně</a>
-          <a href="/#vyroba" class="hover:text-coral transition-colors">Výroba</a>
-          <a href="/#produkty" class="hover:text-coral transition-colors">Produkty</a>
-          <a href="/#kontakt" class="hover:text-coral transition-colors">Kontakt</a>
+          <a href="{{ '/' | url }}#o-mne" class="hover:text-coral transition-colors">O mně</a>
+          <a href="{{ '/' | url }}#vyroba" class="hover:text-coral transition-colors">Výroba</a>
+          <a href="{{ '/' | url }}#produkty" class="hover:text-coral transition-colors">Produkty</a>
+          <a href="{{ '/' | url }}#kontakt" class="hover:text-coral transition-colors">Kontakt</a>
         </nav>
       </div>
     </div>
@@ -36,7 +36,7 @@
   <!-- FOOTER -->
   <div class="stripe-band h-6"></div>
   <footer class="bg-ink text-cream/50 py-10 text-center">
-    <img src="/assets/favicon.svg" height="24" width="24"  class="w-5 h-5 mx-auto mb-4 text-coral">
+    <img src="{{ '/assets/favicon.svg' | url }}" height="24" width="24" class="w-5 h-5 mx-auto mb-4 text-coral">
     <div class="flex justify-center gap-5 label-caps text-cream/60 mb-4">
       <a href="{{ social.facebook }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Facebook</a>
       <a href="{{ social.instagram }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Instagram</a>
@@ -66,6 +66,6 @@
       </div>
     </div>
   </div>
-  <script src="/assets/js/main.js"></script>
+  <script src="{{ '/assets/js/main.js' | url }}"></script>
 </body>
 </html>

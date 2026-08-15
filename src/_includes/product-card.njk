@@ -4,10 +4,14 @@
 {% set t1 = v[(idx + 1) % 3] %}
 {% set t2 = v[(idx + 2) % 3] %}
 {% if product.images and product.images.length > 0 %}
-  {% set imgList = product.images | map(attribute="image") | list %}
+  {% set rawImgList = product.images | map(attribute="image") | list %}
 {% else %}
-  {% set imgList = ["/assets/images/placeholders/placeholder-" + m + ".svg", "/assets/images/placeholders/placeholder-" + t1 + ".svg", "/assets/images/placeholders/placeholder-" + t2 + ".svg"] %}
+  {% set rawImgList = ["/assets/images/placeholders/placeholder-" + m + ".svg", "/assets/images/placeholders/placeholder-" + t1 + ".svg", "/assets/images/placeholders/placeholder-" + t2 + ".svg"] %}
 {% endif %}
+{% set imgList = [] %}
+{% for rawImg in rawImgList %}
+  {% set imgList = (imgList.push(rawImg | url), imgList) %}
+{% endfor %}
 {% set modalData = {
   "name": product.name,
   "desc": product.desc,
