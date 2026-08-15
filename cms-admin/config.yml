@@ -1,10 +1,13 @@
 backend:
   name: github
-  repo: tvuj-ucet/nazev-repozitare # TODO: doplnit skutečný repozitář zákazníka
+  repo: "{{REPO}}"          # e.g. org/client-acme
   branch: main
+  base_url: "{{BASE_URL}}"  # branded OAuth proxy origin, e.g. https://admin.example.com
+  auth_endpoint: auth
 
 media_folder: "src/images/uploads"
-public_folder: "/images/uploads"
+public_folder: "/assets/images"
+locale: "cs"
 
 collections:
   - name: "site"
