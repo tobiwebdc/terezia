@@ -10,18 +10,18 @@ permalink: /index.html
 
   <div class="relative flex-1 flex items-center justify-center text-center px-6 py-16">
     <div>
-      <p class="label-caps text-ink/50 mb-6">{{ site.hero.eyebrow }}</p>
+      <p class="label-caps text-ink/50 mb-6">{{ hero.eyebrow }}</p>
       <h1 class="font-script text-coral text-5xl sm:text-7xl md:text-8xl leading-none">
-        {{ site.hero.title }}
+        {{ hero.title }}
       </h1>
-      <p class="font-body italic text-lg sm:text-xl mt-6 text-ink/70">{{ site.hero.subtitle }}</p>
+      <p class="font-body italic text-lg sm:text-xl mt-6 text-ink/70">{{ hero.subtitle }}</p>
 
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#produkty" class="label-caps px-8 py-3 bg-coral text-cream hover:bg-coral/90 transition-colors">
-          {{ site.hero.ctaPrimary }}
+          {{ hero.ctaPrimary }}
         </a>
         <a href="#kontakt" class="label-caps px-8 py-3 border border-coral text-coral hover:bg-coral/10 transition-colors">
-          {{ site.hero.ctaSecondary }}
+          {{ hero.ctaSecondary }}
         </a>
       </div>
     </div>
@@ -35,18 +35,18 @@ permalink: /index.html
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
     <div class="deco-frame p-2">
       <div class="aspect-[3/4] bg-sage/40 flex flex-col items-center justify-center text-ink gap-4">
-        <svg class="w-16 h-16 text-coral"><img src="/assets/favicon.svg" class="w-6 h-6">
+        <img src="/assets/favicon.svg" class="w-16 h-16 text-coral" alt="">
         <p class="label-caps text-ink/60 text-center px-8">Portrét ateliéru<br/>doplníme fotografií</p>
       </div>
     </div>
 
     <div>
-      <p class="label-caps text-coral mb-4">{{ site.about.eyebrow }}</p>
-      <h2 class="font-display font-semibold text-3xl sm:text-4xl mb-6">{{ site.about.heading }}</h2>
-      <p class="font-body text-lg leading-relaxed text-ink/80 mb-4">{{ site.about.text }}</p>
-      <p class="font-body text-lg leading-relaxed text-ink/80 mb-8">{{ site.about.text2 }}</p>
+      <p class="label-caps text-coral mb-4">{{ about.eyebrow }}</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mb-6">{{ about.heading }}</h2>
+      <p class="font-body text-lg leading-relaxed text-ink/80 mb-4">{{ about.text }}</p>
+      <p class="font-body text-lg leading-relaxed text-ink/80 mb-8">{{ about.text2 }}</p>
       <blockquote class="border-l-2 border-mustard pl-6 font-script text-2xl text-coral">
-        {{ site.about.quote }}
+        {{ about.quote }}
       </blockquote>
     </div>
   </div>
@@ -59,22 +59,22 @@ permalink: /index.html
 <section id="vyroba" class="bg-ink text-cream py-24 sm:py-32">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
-      <p class="label-caps text-mustard mb-4">{{ site.gallery.eyebrow }}</p>
-      <h2 class="font-display font-semibold text-3xl sm:text-4xl">{{ site.gallery.heading }}</h2>
+      <p class="label-caps text-mustard mb-4">{{ gallery.eyebrow }}</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl">{{ gallery.heading }}</h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-10">
       <div class="border-t-2 border-coral pt-6">
-        <p class="label-caps text-coral mb-3">{{ site.gallery.caption }}</p>
-        <p class="font-body text-cream/80 leading-relaxed">{{ site.gallery.text }}</p>
+        <p class="label-caps text-coral mb-3">{{ gallery.caption }}</p>
+        <p class="font-body text-cream/80 leading-relaxed">{{ gallery.text }}</p>
       </div>
       <div class="border-t-2 border-mustard pt-6">
-        <p class="label-caps text-mustard mb-3">{{ site.gallery.caption1 }}</p>
-        <p class="font-body text-cream/80 leading-relaxed">{{ site.gallery.text1 }}</p>
+        <p class="label-caps text-mustard mb-3">{{ gallery.caption1 }}</p>
+        <p class="font-body text-cream/80 leading-relaxed">{{ gallery.text1 }}</p>
       </div>
       <div class="border-t-2 border-sage pt-6">
-        <p class="label-caps text-sage mb-3">{{ site.gallery.caption2 }}</p>
-        <p class="font-body text-cream/80 leading-relaxed">{{ site.gallery.text2 }}</p>
+        <p class="label-caps text-sage mb-3">{{ gallery.caption2 }}</p>
+        <p class="font-body text-cream/80 leading-relaxed">{{ gallery.text2 }}</p>
       </div>
     </div>
   </div>
@@ -87,25 +87,25 @@ permalink: /index.html
 <section id="produkty" class="bg-cream py-24 sm:py-32">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-6">
-      <p class="label-caps text-coral mb-4">{{ site.products.eyebrow }}</p>
-      <h2 class="font-display font-semibold text-2xl sm:text-3xl">{{ site.products.heading }}</h2>
-      <p class="font-body text-ink/70 mt-3 max-w-xl mx-auto">{{ site.products.text }}</p>
+      <p class="label-caps text-coral mb-4">{{ productsIntro.eyebrow }}</p>
+      <h2 class="font-display font-semibold text-2xl sm:text-3xl">{{ productsIntro.heading }}</h2>
+      <p class="font-body text-ink/70 mt-3 max-w-xl mx-auto">{{ productsIntro.text }}</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 mt-16">
-      {% for product in site.products.items %}
-        {{ cards.productCard(product, loop.index0, false) }}
+      {% for product in collections.productsKolekce %}
+        {{ cards.productCard(product.data, loop.index0, product.data.sold) }}
       {% endfor %}
     </div>
 
     <div class="text-center mt-24 mb-6">
-      <h2 class="font-display font-semibold text-2xl sm:text-3xl">{{ site.products.heading1 }}</h2>
-      <p class="font-body text-ink/70 mt-3 max-w-xl mx-auto">{{ site.products.text1 }}</p>
+      <h2 class="font-display font-semibold text-2xl sm:text-3xl">{{ productsIntro.heading1 }}</h2>
+      <p class="font-body text-ink/70 mt-3 max-w-xl mx-auto">{{ productsIntro.text1 }}</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 mt-16">
-      {% for product in site.products.items1 %}
-        {{ cards.productCard(product, loop.index0 + 1, true) }}
+      {% for product in collections.productsInspirace %}
+        {{ cards.productCard(product.data, loop.index0 + 1, product.data.sold) }}
       {% endfor %}
     </div>
   </div>
@@ -115,9 +115,9 @@ permalink: /index.html
 <section id="kontakt" class="relative bg-coral text-cream py-24 sm:py-32 overflow-hidden">
   <div class="relative max-w-3xl mx-auto px-6">
     <div class="text-center mb-12">
-      <p class="label-caps text-mustard mb-4">{{ site.contact.eyebrow }}</p>
-      <h2 class="font-display font-semibold text-3xl sm:text-4xl mb-6">{{ site.contact.heading }}</h2>
-      <p class="font-body text-lg text-cream/90">{{ site.contact.text }}</p>
+      <p class="label-caps text-mustard mb-4">{{ contact.eyebrow }}</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl mb-6">{{ contact.heading }}</h2>
+      <p class="font-body text-lg text-cream/90">{{ contact.text }}</p>
     </div>
 
     <form name="poptavka" method="POST" data-netlify="true" class="border border-cream/40 p-8 sm:p-10 space-y-6">
@@ -144,9 +144,9 @@ permalink: /index.html
     </form>
 
     <div class="text-center mt-10 label-caps text-cream/80 space-y-1">
-      <p>{{ site.contact.email }} · {{ site.contact.phone }}</p>
-      <p>{{ site.contact.address }}</p>
-      <p class="text-cream/60">{{ site.contact.ico }}</p>
+      <p>{{ contact.email }} · {{ contact.phone }}</p>
+      <p>{{ contact.address }}</p>
+      <p class="text-cream/60">{{ contact.ico }}</p>
     </div>
   </div>
 </section>

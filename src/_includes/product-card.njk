@@ -8,8 +8,20 @@
 {% else %}
   {% set imgList = ["/assets/images/placeholders/placeholder-" + m + ".svg", "/assets/images/placeholders/placeholder-" + t1 + ".svg", "/assets/images/placeholders/placeholder-" + t2 + ".svg"] %}
 {% endif %}
+{% set modalData = {
+  "name": product.name,
+  "desc": product.desc,
+  "desc1": product.desc1,
+  "desc2": product.desc2,
+  "price": product.price,
+  "type": product.type,
+  "color": product.color,
+  "material": product.material,
+  "size": product.size,
+  "sold": sold
+} %}
 <div class="product-card" data-images='{{ imgList | dump | safe }}'>
-  <script type="application/json" class="product-data">{{ product | dump | safe }}</script>
+  <script type="application/json" class="product-data">{{ modalData | dump | safe }}</script>
 
   <button type="button" class="product-img-btn group block w-full aspect-[4/5] overflow-hidden border border-ink/10 relative" data-index="0">
     <img src="{{ imgList[0] }}" alt="{{ product.name }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
+/* tailwind.config.js se v Tailwind v4 bez explicitního @config nenačítá —
+   veškerá konfigurace (barvy, fonty, safelist) proto žije tady, v CSS. */
+@source inline("{,hover:,focus:}{border,bg,text}-{coral,mustard,sage}{,/10,/40,/50,/90}");
+
 /* Definice vlastních hodnot tématu přímo v CSS (Tailwind v4) */
 @theme {
   /* Definice vašeho fontu body */
   --font-body: 'Inter', sans-serif; /* Dosadte váš požadovaný font */
   --font-label: "Montserrat", sans-serif;
+  --font-script: '"Kaushan Script"', cursive; /* logo / kurzívový styl */
+  --font-display: '"Fredoka"', sans-serif; /* nadpisy */
   --tracking-widest2: 0.25em; /* Hodnotu si upravte dle potřeby */
-  
+
   /* Definice vlastních barev pro funkci theme() nebo @apply */
   --color-coral: rgb(226 56 90);
   --color-mustard: rgb(240 189 42);

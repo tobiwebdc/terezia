@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title or site.meta.title }}</title>
-  <meta name="description" content="{{ description or site.meta.description }}" />
+  <title>{{ title or meta.title }}</title>
+  <meta name="description" content="{{ description or meta.description }}" />
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,11 +38,11 @@
   <footer class="bg-ink text-cream/50 py-10 text-center">
     <img src="/assets/favicon.svg" height="24" width="24"  class="w-5 h-5 mx-auto mb-4 text-coral">
     <div class="flex justify-center gap-5 label-caps text-cream/60 mb-4">
-      <a href="{{ site.social_links[0].facebook }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Facebook</a>
-      <a href="{{ site.social_links[0].instagram }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Instagram</a>
-      <a href="{{ site.social_links[0].fler }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Fler</a>
+      <a href="{{ social.facebook }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Facebook</a>
+      <a href="{{ social.instagram }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Instagram</a>
+      <a href="{{ social.fler }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Fler</a>
     </div>
-    <p class="label-caps text-xs">{{ site.footer.text }} · © {{ currentYear }} {{ site.hero.title }}</p>
+    <p class="label-caps text-xs">{{ footer.text }} · © {{ currentYear }} {{ hero.title }}</p>
   </footer>
 
   <!-- MODAL: prohlížení fotek produktu (hlavní obrázek + náhledy, šipky, detail) -->

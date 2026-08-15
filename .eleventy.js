@@ -11,16 +11,20 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("currentYear", () => `${new Date().getFullYear()}`);
 
-  // Products: hide anything explicitly marked visible: false, newest/A-Z first
-  eleventyConfig.addCollection("products", (collectionApi) => {
+  // Produkty — kolekce k prodeji (řazeno abecedně, skryté produkty ven)
+  eleventyConfig.addCollection("productsKolekce", (collectionApi) => {
     return collectionApi
-      .getFilteredByGlob("src/content/products/*.md")
+      .getFilteredByGlob("src/content/products-kolekce/*.md")
       .filter((item) => item.data.visible !== false)
       .sort((a, b) => (a.data.name || "").localeCompare(b.data.name || ""));
   });
 
-  eleventyConfig.addCollection("pages", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/content/pages/*.md");
+  // Produkty — na objednání / inspirace
+  eleventyConfig.addCollection("productsInspirace", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("src/content/products-inspirace/*.md")
+      .filter((item) => item.data.visible !== false)
+      .sort((a, b) => (a.data.name || "").localeCompare(b.data.name || ""));
   });
 
   return {
