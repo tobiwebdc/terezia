@@ -4,7 +4,10 @@
 {% set t1 = v[(idx + 1) % 3] %}
 {% set t2 = v[(idx + 2) % 3] %}
 {% if product.images and product.images.length > 0 %}
-  {% set rawImgList = product.images | map(attribute="image") | list %}
+  {% set rawImgList = [] %}
+  {% for imgObj in product.images %}
+    {% set rawImgList = (rawImgList.push(imgObj.image), rawImgList) %}
+  {% endfor %}
 {% else %}
   {% set rawImgList = ["/assets/images/placeholders/placeholder-" + m + ".svg", "/assets/images/placeholders/placeholder-" + t1 + ".svg", "/assets/images/placeholders/placeholder-" + t2 + ".svg"] %}
 {% endif %}
