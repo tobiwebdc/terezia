@@ -37,10 +37,24 @@
   <div class="stripe-band h-6"></div>
   <footer class="bg-ink text-cream/50 py-10 text-center">
     <img src="{{ '/assets/favicon.svg' | url }}" height="24" width="24" class="w-5 h-5 mx-auto mb-4 text-coral">
-    <div class="flex justify-center gap-5 label-caps text-cream/60 mb-4">
-      <a href="{{ social.facebook }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Facebook</a>
-      <a href="{{ social.instagram }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Instagram</a>
-      <a href="{{ social.fler }}" target="_blank" rel="noopener" class="hover:text-coral transition-colors">Fler</a>
+    <div class="flex justify-center gap-5 text-cream/60 mb-4">
+      {% if social.facebook %}
+      <a href="{{ social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-facebook transition-colors">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.95 2 14.66 2 11.96 2 10 3.66 10 6.7v2.8H7v4h3V22h4v-8.5Z"/></svg>
+      </a>
+      {% endif %}
+      {% if social.instagram %}
+      <a href="{{ social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-coral transition-colors">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1"/></svg>
+      </a>
+      {% endif %}
+      {% if social.fler %}
+      <a href="{{ social.fler }}" target="_blank" rel="noopener" aria-label="Fler" class="hover:text-fler transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"  fill="currentColor" stroke="none" >
+          <path d="M 18.16,3.01 C 17.77,2.63 17.21,2.4 16.47,2.4 C 14.73,2.4 13.5,3.45 12.49,6.44 L 12.24,7.16 L 11.97,7.92 C 11.76,8.55 11.43,8.8 10.73,8.8 L 9.4,8.8 C 8.86,8.8 8.54,9.21 8.35,9.72 C 8.19,10.19 8.33,10.53 8.8,10.53 L 10.14,10.53 C 10.74,10.53 10.98,10.85 10.8,11.41 L 10.7,11.73 L 10.6,11.98 L 8.98,16.81 C 8.52,18.15 7.94,19.49 7.23,19.49 C 7.14,19.49 7.08,19.45 7.03,19.39 C 6.83,19.2 6.61,19.25 6.43,19.39 C 6.07,19.66 5.78,20.23 5.73,20.45 C 5.7,20.6 5.72,20.85 5.85,20.99 C 6.24,21.37 6.8,21.6 7.54,21.6 C 9.1,21.6 10.19,20.84 11.13,18.51 L 12.07,15.74 L 12.35,14.95 C 12.36,14.91 12.37,14.87 12.39,14.83 L 13.08,12.82 L 13.17,12.58 L 13.56,11.41 C 13.77,10.78 14.1,10.53 14.8,10.53 L 15.33,10.51 C 15.86,10.51 16.14,10.23 16.33,9.73 C 16.49,9.26 16.4,8.78 15.92,8.78 L 15.4,8.8 C 14.8,8.8 14.58,8.52 14.77,7.96 L 15.01,7.22 L 15.02,7.19 C 15.48,5.85 16.06,4.52 16.77,4.52 C 16.86,4.52 16.93,4.55 16.98,4.61 C 17.18,4.8 17.44,4.74 17.63,4.59 C 17.84,4.43 18.18,3.78 18.25,3.56 C 18.3,3.37 18.3,3.14 18.16,3.01 Z" />
+        </svg>  
+      </a>
+      {% endif %}
     </div>
     <p class="label-caps text-xs">{{ footer.text }} · © {{ currentYear }} {{ hero.title }}</p>
   </footer>
@@ -61,9 +75,18 @@
         </div>
         <div class="p-6 sm:p-8 overflow-y-auto max-h-[80vh]">
           <h3 id="modal-name" class="font-display font-semibold text-2xl mb-2"></h3>
-          <p id="modal-price" class="label-caps text-coral mb-4"></p>
+          <p id="modal-price" class="label-caps text-xl text-coral mb-4"></p>
           <p id="modal-desc" class="font-body text-ink/80 leading-relaxed mb-5 whitespace-pre-line"></p>
-          <dl id="modal-specs" class="text-sm space-y-2 text-ink/70 border-t border-ink/10 pt-4"></dl>
+          <div class="border-t border-ink/10 pt-4">
+            <table id="modal-specs" class="text-sm text-ink/70 w-full border-collapse">
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="flex">
+            <button type="button" id="modal-poptat" class="label-caps px-6 py-2 border border-coral text-coral hover:bg-coral hover:text-cream transition-colors mt-5  w-full">
+              Poptat tento produkt
+            </button>
+          </div>
         </div>
       </div>
     </div>

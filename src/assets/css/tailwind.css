@@ -1,24 +1,40 @@
 @import "tailwindcss";
 
-/* tailwind.config.js se v Tailwind v4 bez explicitního @config nenačítá —
-   veškerá konfigurace (barvy, fonty, safelist) proto žije tady, v CSS. */
-@source inline("{,hover:,focus:}{border,bg,text}-{coral,mustard,sage}{,/10,/40,/50,/90}");
+/* 1. Skenování celého projektu od kořene (ignoruje složky z .gitignore jako node_modules) */
+@source "../../../**/*.{njk,html,js}";
+@source "../../**/*.{njk,html,js}";
+@source "../**/*.{njk,html,js}";
 
-/* Definice vlastních hodnot tématu přímo v CSS (Tailwind v4) */
+/* 2. Přímé vynucení dynamických tříd z vašeho původního safelistu */
+@utility border-coral/50 { border-color: color-mix(in srgb, var(--color-coral) 50%, transparent); }
+@utility hover:bg-coral/10 { &:hover { background-color: color-mix(in srgb, var(--color-coral) 10%, transparent); } }
+@utility text-coral { color: var(--color-coral); }
+
+@utility border-mustard/50 { border-color: color-mix(in srgb, var(--color-mustard) 50%, transparent); }
+@utility hover:bg-mustard/10 { &:hover { background-color: color-mix(in srgb, var(--color-mustard) 10%, transparent); } }
+@utility text-mustard { color: var(--color-mustard); }
+
+@utility border-sage/50 { border-color: color-mix(in srgb, var(--color-sage) 50%, transparent); }
+@utility hover:bg-sage/10 { &:hover { background-color: color-mix(in srgb, var(--color-sage) 10%, transparent); } }
+@utility text-sage { color: var(--color-sage); }
+
+/* 3. Definice barev a fontů */
 @theme {
-  /* Definice vašeho fontu body */
-  --font-body: 'Inter', sans-serif; /* Dosadte váš požadovaný font */
-  --font-label: "Montserrat", sans-serif;
-  --font-script: '"Kaushan Script"', cursive; /* logo / kurzívový styl */
-  --font-display: '"Fredoka"', sans-serif; /* nadpisy */
-  --tracking-widest2: 0.25em; /* Hodnotu si upravte dle potřeby */
+  --font-body: Inter, sans-serif;
+  --font-label: Montserrat, sans-serif;
+  --font-script: "Kaushan Script", cursive;
+  --font-display: Fredoka, sans-serif;
 
-  /* Definice vlastních barev pro funkci theme() nebo @apply */
-  --color-coral: rgb(226 56 90);
-  --color-mustard: rgb(240 189 42);
-  --color-sage: rgb(159 200 159);
-  --color-cream: rgb(255 237 202);
-  --color-ink: rgb(43 36 30);
+  --tracking-widest2: 0.25em;
+
+  --color-coral: #e2385a;
+  --color-mustard: #f0bd2a;
+  --color-sage: #9fc89f;
+  --color-cream: #ffedca;
+  --color-ink: #2b241e;
+
+  --color-facebook: #1877f2;
+  --color-fler: #ef2e8f;
 }
 
 @layer base {
@@ -34,7 +50,6 @@
     scroll-behavior: smooth;
   }
   body {
-    /* V v4 použijeme přímo CSS proměnnou fontu */
     font-family: var(--font-body);
   }
 }
@@ -53,7 +68,6 @@
     position: absolute;
     width: 14px;
     height: 14px;
-    /* Místo theme(colors.coral) použijeme var() nebo zpětné náhradní řešení */
     border: 1px solid var(--color-coral);
   }
   .deco-frame::before {
