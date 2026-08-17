@@ -1,24 +1,17 @@
 @import "tailwindcss";
 
-/* 1. Skenování celého projektu od kořene (ignoruje složky z .gitignore jako node_modules) */
+/* 1. Skenování projektu od kořene */
 @source "../../../**/*.{njk,html,js}";
 @source "../../**/*.{njk,html,js}";
 @source "../**/*.{njk,html,js}";
 
-/* 2. Přímé vynucení dynamických tříd z vašeho původního safelistu */
-@utility border-coral/50 { border-color: color-mix(in srgb, var(--color-coral) 50%, transparent); }
-@utility hover:bg-coral/10 { &:hover { background-color: color-mix(in srgb, var(--color-coral) 10%, transparent); } }
-@utility text-coral { color: var(--color-coral); }
+/* 2. Safelist - skener najde třídy v komentáři a automaticky je vygeneruje:
+   border-coral/50 hover:bg-coral/10 text-coral
+   border-mustard/50 hover:bg-mustard/10 text-mustard
+   border-sage/50 hover:bg-sage/10 text-sage
+*/
 
-@utility border-mustard/50 { border-color: color-mix(in srgb, var(--color-mustard) 50%, transparent); }
-@utility hover:bg-mustard/10 { &:hover { background-color: color-mix(in srgb, var(--color-mustard) 10%, transparent); } }
-@utility text-mustard { color: var(--color-mustard); }
-
-@utility border-sage/50 { border-color: color-mix(in srgb, var(--color-sage) 50%, transparent); }
-@utility hover:bg-sage/10 { &:hover { background-color: color-mix(in srgb, var(--color-sage) 10%, transparent); } }
-@utility text-sage { color: var(--color-sage); }
-
-/* 3. Definice barev a fontů */
+/* 3. Definice témata */
 @theme {
   --font-body: Inter, sans-serif;
   --font-label: Montserrat, sans-serif;
