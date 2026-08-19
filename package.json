@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/base.css --minify && eleventy",
     "serve": "eleventy --serve",
+    "css": "npx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/base.css --watch",
     "debug": "DEBUG=Eleventy* eleventy"
   },
   "devDependencies": {

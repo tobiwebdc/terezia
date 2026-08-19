@@ -6,37 +6,98 @@
   <title>{{ title or meta.title }}</title>
   <meta name="description" content="{{ description or meta.description }}" />
   <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Fredoka:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="preload" href="{{ '/assets/fonts/nunito-v32-latin_latin-ext-600.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/nunito-v32-latin_latin-ext-regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/kaushan-script-v19-latin_latin-ext-regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/quicksand-v37-latin_latin-ext-300.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/quicksand-v37-latin_latin-ext-700.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/quicksand-v37-latin_latin-ext-regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/montserrat-v31-latin-regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/inter-v20-latin_latin-ext-regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+
   <link rel="stylesheet" href="{{ '/assets/css/base.css' | url }}" />
 </head>
 <body class="bg-cream text-ink antialiased">
   
   <!-- NAV -->
   <header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-cream/95 border-b border-coral/20 transition-shadow duration-300">
-    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="{{ '/' | url }}" class="flex items-center gap-2 text-coral">
-        <img src="{{ '/assets/favicon.svg' | url }}" class="w-6 h-6">
-        <span class="font-script text-xl">Klobouky Terezia</span>
-      </a>
-      <div class="flex items-center gap-6">
-        <nav class="hidden sm:flex gap-8 label-caps text-ink/70">
-          <a href="{{ '/' | url }}#o-mne" class="hover:text-coral transition-colors">O mně</a>
-          <a href="{{ '/' | url }}#vyroba" class="hover:text-coral transition-colors">Výroba</a>
-          <a href="{{ '/' | url }}#produkty" class="hover:text-coral transition-colors">Produkty</a>
-          <a href="{{ '/' | url }}#kontakt" class="hover:text-coral transition-colors">Kontakt</a>
-        </nav>
-      </div>
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+    <a href="{{ '/' | url }}" class="flex items-center gap-2 text-coral">
+      <img src="{{ '/assets/favicon.svg' | url }}" class="w-6 h-6">
+      <span class="font-script text-xl">Klobouky Terezia</span>
+    </a>
+
+    <div class="flex items-center gap-6">
+      <nav class="hidden sm:flex gap-8 label-caps text-ink/70">
+        <a href="{{ '/' | url }}#o-mne" class="hover:text-coral transition-colors">O mně</a>
+        <a href="{{ '/' | url }}#vyroba" class="hover:text-coral transition-colors">Výroba</a>
+        <a href="{{ '/' | url }}#produkty" class="hover:text-coral transition-colors">Produkty</a>
+        <a href="{{ '/' | url }}#kontakt" class="hover:text-coral transition-colors">Kontakt</a>
+      </nav>
+
+      <button
+        id="nav-toggle"
+        type="button"
+        class="sm:hidden text-coral"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Otevřít menu"
+      >
+        <svg id="icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden">
+          <line x1="6" y1="6" x2="18" y2="18"/>
+          <line x1="18" y1="6" x2="6" y2="18"/>
+        </svg>
+      </button>
     </div>
-  </header>
+  </div>
+
+  <nav id="mobile-nav" class="hidden sm:hidden flex-col gap-1 px-6 pb-4 label-caps text-ink/70">
+    <a href="{{ '/' | url }}#o-mne" class="block py-2 hover:text-coral transition-colors">O mně</a>
+    <a href="{{ '/' | url }}#vyroba" class="block py-2 hover:text-coral transition-colors">Výroba</a>
+    <a href="{{ '/' | url }}#produkty" class="block py-2 hover:text-coral transition-colors">Produkty</a>
+    <a href="{{ '/' | url }}#kontakt" class="block py-2 hover:text-coral transition-colors">Kontakt</a>
+  </nav>
+</header>
+
+<script>
+  (function () {
+    const toggle = document.getElementById('nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('flex');
+      mobileNav.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // zavřít menu po kliknutí na odkaz (užitečné pro jednostránkové kotvy)
+    mobileNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+        mobileNav.classList.remove('flex');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
 
   {{ content | safe }}
 
   <!-- FOOTER -->
   <div class="stripe-band h-6"></div>
-  <footer class="bg-ink text-cream/50 py-10 text-center">
-    <img src="{{ '/assets/favicon.svg' | url }}" height="24" width="24" class="w-5 h-5 mx-auto mb-4 text-coral">
+  <footer class="bg-brown text-cream/50 py-10 text-center">
     <div class="flex justify-center gap-5 text-cream/60 mb-4">
       {% if social.facebook %}
       <a href="{{ social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-facebook transition-colors">
@@ -56,14 +117,24 @@
       </a>
       {% endif %}
     </div>
-    <p class="label-caps text-xs">{{ footer.text }} · © {{ currentYear }} {{ hero.title }}</p>
+
+    <div class="flex flex-col items-center sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-center justify-items-center gap-2 label-caps text-xs">
+      <span class="text-nowrap sm:justify-self-end">{{ footer.text }}</span>
+      <img src="{{ '/assets/favicon.svg' | url }}" height="24" width="24" class="w-5 h-5 text-coral">
+      <span class="text-nowrap sm:justify-self-start">© {{ currentYear }} {{ hero.title }}</span>
+    </div>
+  
   </footer>
 
   <!-- MODAL: prohlížení fotek produktu (hlavní obrázek + náhledy, šipky, detail) -->
   <div id="product-modal" class="fixed inset-0 z-[100] hidden bg-ink/90 p-4 sm:p-8 overflow-y-auto items-start sm:items-center justify-center">
     <div class="max-w-4xl w-full bg-cream relative mx-auto my-auto">
-      <button id="modal-close" type="button" aria-label="Zavřít" class="absolute -top-10 right-0 sm:top-4 sm:right-4 text-cream sm:text-ink/60 hover:text-coral text-3xl leading-none z-10">&times;</button>
-
+      <button id="modal-close" type="button" aria-label="Zavřít" class="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 flex items-center justify-center w-9 h-9 rounded-full bg-ink/60 text-cream hover:bg-coral hover:text-cream transition-colors">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="2" y1="2" x2="14" y2="14"/>
+          <line x1="14" y1="2" x2="2" y2="14"/>
+        </svg>
+      </button>
       <div class="grid sm:grid-cols-2">
         <div class="flex bg-ink/5">
           <div id="modal-thumbs" class="flex flex-col gap-2 p-3 overflow-y-auto max-h-[70vh] sm:max-h-[80vh]"></div>

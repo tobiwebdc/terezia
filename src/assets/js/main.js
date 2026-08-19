@@ -18,6 +18,7 @@
   var currentImages = [];
   var currentIndex = 0;
   var currentProductName = "";
+  var isModalOpen = false;
 
   function specRow(label, value) {
     if (!value) return "";
@@ -101,13 +102,32 @@
     modal.classList.remove("hidden");
     modal.classList.add("flex");
     document.body.style.overflow = "hidden";
+    isModalOpen = true;
+
+    // Virtual step in history — Android/mobile back button "consumes" it
+    // as a popstate event instead of leaving the page.
+    history.pushState({ productModalOpen: true }, "");
   }
 
-  function closeModal() {
+  function closeModal(fromPopstate) {
+    if (!isModalOpen) return;
+
     modal.classList.add("hidden");
     modal.classList.remove("flex");
     document.body.style.overflow = "";
+    isModalOpen = false;
+
+    // If we close the modal via UI (cross, backdrop, Escape, button),
+    // we have to "consume" the pushed historical step ourselves — otherwise
+    // the user would be stuck and would have to press back twice.
+    if (!fromPopstate) {
+      history.back();
+    }
   }
+
+  window.addEventListener("popstate", function () {
+    if (isModalOpen) closeModal(true);
+  });
 
   // Delegated click handling — product cards are static-generated at build
   // time, so one listener on the document covers all of them.
