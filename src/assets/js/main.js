@@ -165,20 +165,20 @@
 
   poptatBtn.addEventListener("click", function () {
     closeModal();
-    var zprava = document.getElementById("zprava");
-    var kontaktSection = document.getElementById("kontakt");
-    if (zprava && currentProductName) {
-      zprava.value = 'Dobrý den, mám zájem o produkt "' + currentProductName + '". ';
+    var message = document.getElementById("message");
+    var contactSection = document.getElementById("kontakt");
+    if (message && currentProductName) {
+      message.value = 'Dobrý den, mám zájem o produkt "' + currentProductName + '". ';
     }
-    if (kontaktSection) {
-      kontaktSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-    if (zprava) {
+    if (message) {
       // Až doscrolluje (smooth scroll trvá chvíli), teprve pak zaostřit —
       // jinak by focus přerušil probíhající animaci scrollování.
       window.setTimeout(function () {
-        zprava.focus();
-        zprava.setSelectionRange(zprava.value.length, zprava.value.length);
+        message.focus();
+        message.setSelectionRange(message.value.length, message.value.length);
       }, 500);
     }
   });

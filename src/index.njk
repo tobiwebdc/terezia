@@ -89,15 +89,15 @@ permalink: /index.html
     <div class="grid md:grid-cols-3 gap-10">
       <div class="border-t-2 border-coral pt-6">
         <p class="label-caps text-coral mb-3">{{ gallery.caption }}</p>
-        <p class="font-body text-cream/80 leading-relaxed">{{ gallery.text }}</p>
+        <p class="font-body text-cream/80 leading-relaxed text-justify">{{ gallery.text }}</p>
       </div>
       <div class="border-t-2 border-mustard pt-6">
         <p class="label-caps text-mustard mb-3">{{ gallery.caption1 }}</p>
-        <p class="font-body text-cream/80 leading-relaxed">{{ gallery.text1 }}</p>
+        <p class="font-body text-cream/80 leading-relaxed text-justify">{{ gallery.text1 }}</p>
       </div>
       <div class="border-t-2 border-sage pt-6">
         <p class="label-caps text-sage mb-3">{{ gallery.caption2 }}</p>
-        <p class="font-body text-cream/80 leading-relaxed">{{ gallery.text2 }}</p>
+        <p class="font-body text-cream/80 leading-relaxed text-justify">{{ gallery.text2 }}</p>
       </div>
     </div>
   </div>
@@ -112,7 +112,7 @@ permalink: /index.html
     <div class="text-center mb-6">
       <p class="label-caps text-coral mb-4">{{ productsIntro.eyebrow }}</p>
       <h2 class="font-display font-semibold text-2xl sm:text-3xl">{{ productsIntro.heading }}</h2>
-      <p class="font-body text-ink/70 mt-3 max-w-xl mx-auto">{{ productsIntro.text }}</p>
+      <p class="font-body text-ink/70 mt-3 max-w-xl mx-auto text-justify">{{ productsIntro.text }}</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 mt-16">
@@ -143,12 +143,13 @@ permalink: /index.html
       <p class="font-body text-lg text-cream/90">{{ contact.text }}</p>
     </div>
 
-    <form name="poptavka" method="POST" data-netlify="true" class="border border-cream/40 p-8 sm:p-10 space-y-6">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <form id="contact-form" class="border border-cream/40 p-8 sm:p-10 space-y-6">
       <input type="hidden" name="form-name" value="poptavka" />
       <div class="grid sm:grid-cols-2 gap-6">
         <div>
-          <label class="label-caps block mb-2" for="jmeno">Jméno</label>
-          <input id="jmeno" name="jmeno" type="text" required class="w-full bg-transparent border-b border-cream/40 py-2 focus:outline-none focus:border-mustard" />
+          <label class="label-caps block mb-2" for="name">Jméno</label>
+          <input id="name" name="name" type="text" required class="w-full bg-transparent border-b border-cream/40 py-2 focus:outline-none focus:border-mustard" />
         </div>
         <div>
           <label class="label-caps block mb-2" for="email">E-mail</label>
@@ -156,13 +157,16 @@ permalink: /index.html
         </div>
       </div>
       <div>
-        <label class="label-caps block mb-2" for="zprava">Zpráva</label>
-        <textarea id="zprava" name="zprava" rows="4" required class="w-full bg-transparent border-b border-cream/40 py-2 focus:outline-none focus:border-mustard resize-none"></textarea>
+        <label class="label-caps block mb-2" for="message">Zpráva</label>
+        <textarea id="message" name="message" rows="4" required class="w-full bg-transparent border-b border-cream/40 py-2 focus:outline-none focus:border-mustard resize-none"></textarea>
       </div>
+      <input type="text" name="website" style="position:absolute; left:-9999px" tabindex="-1" autocomplete="off" />
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAEXtY5ZqmzeYeMbm"></div>
       <div class="text-center pt-2">
         <button type="submit" class="label-caps px-10 py-3 bg-mustard text-ink hover:bg-mustard/90 transition-colors">
           Odeslat poptávku
         </button>
+        <p id="form-status"></p>
       </div>
     </form>
 
