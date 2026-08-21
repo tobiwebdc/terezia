@@ -160,7 +160,11 @@ permalink: /index.html
         <label class="label-caps block mb-2" for="message">Zpráva</label>
         <textarea id="message" name="message" rows="4" required class="w-full bg-transparent border-b border-cream/40 py-2 focus:outline-none focus:border-mustard resize-none"></textarea>
       </div>
-      <div class="text-center pt-2">
+      <div class="text-center pt-2">  
+        <button type="submit" class="label-caps px-10 py-3 bg-mustard text-ink hover:bg-mustard/90 transition-colors">
+          Odeslat poptávku
+        </button>
+        <p id="form-status"></p>
         <input type="text" name="website" style="position:absolute; left:-9999px" tabindex="-1" autocomplete="off" />
         <div id="turnstile-widget"
             class="cf-turnstile"
@@ -171,11 +175,6 @@ permalink: /index.html
             data-expired-callback="onTurnstileExpired"
             data-error-callback="onTurnstileError">
         </div>
-  
-        <button type="submit" class="label-caps px-10 py-3 bg-mustard text-ink hover:bg-mustard/90 transition-colors">
-          Odeslat poptávku
-        </button>
-        <p id="form-status"></p>
       </div>
     </form>
 
