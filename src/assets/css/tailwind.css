@@ -155,4 +155,14 @@
   .bg-brown {
     background-color: var(--color-brown);
   }
+
+  #turnstile-wrapper {
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    max-height: 100px;
+    overflow: hidden;
+  }
+  #turnstile-wrapper.hidden {
+    opacity: 0;
+    max-height: 0;
+  }
 }
