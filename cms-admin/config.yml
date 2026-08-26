@@ -1,9 +1,8 @@
 backend:
   name: github
-  repo: "{{REPO}}"          # e.g. org/client-acme
+  repo: "tobiwebdc/nazev-repo-terezia"
   branch: main
-  base_url: "{{BASE_URL}}"  # branded OAuth proxy origin, e.g. https://admin.example.com
-  auth_endpoint: auth
+  base_url: https://sveltia-cms-auth.tobi-webdc.workers.dev
 
 media_folder: "src/images/uploads"
 public_folder: "/assets/images"
