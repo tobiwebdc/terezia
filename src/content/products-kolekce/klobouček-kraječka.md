@@ -11,5 +11,8 @@ price: 2800 Kč
 sold: true
 visible: true
 images:
+  - /assets/images/uploads/DSC_0628.JPG
+  - /assets/images/uploads/LPAX8586.JPG
+  - /assets/images/uploads/FOHH8954.JPG
   - /assets/images/uploads/SPWJ2868.JPG
 ---
