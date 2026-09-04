@@ -11,10 +11,11 @@ price: 2400 Kč
 sold: false
 visible: true
 images:
-  - /assets/images/uploads/IMG_1002.JPG
+  - /assets/images/uploads/DSC_0090.webp
   - /assets/images/uploads/IMG_3572.JPG
   - /assets/images/uploads/IMG_3559.JPG
   - /assets/images/uploads/IMG_3578.JPG
   - /assets/images/uploads/IMG-20240905-WA0010.jpg
   - /assets/images/uploads/hrebinky.png
+  - /assets/images/uploads/IMG_20240718_192645_314.webp
 ---
