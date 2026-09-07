@@ -13,4 +13,5 @@ visible: true
 images:
   - /assets/images/uploads/IMG_8534.JPG
   - /assets/images/uploads/IMG_8540.JPG
+  - /assets/images/uploads/IMG_8578.JPG
 ---
