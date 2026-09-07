@@ -13,6 +13,4 @@ visible: true
 images:
   - /assets/images/uploads/DSC_5051(1).jpg
   - /assets/images/uploads/DSC_5124.JPG
-  - /assets/images/uploads/DSC_5054.JPG
-  - /assets/images/uploads/DSC_5045.JPG
 ---
