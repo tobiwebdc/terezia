@@ -1,5 +1,5 @@
 ---
-name: PUNTÍKATÝ MINI KLOBOUČEK
+name: PUNTÍKATÝ MINI KLOBOUČEK TEREZA
 desc: |-
   Malý plstěný klobouček je vyroben z upcyklované plsti starších klobouků. Materiál byl vyčištěn a vypnut na novou formu. Ozdobenje bílými puntíky a růžovou mašlí. Na přání mohu vyměnit barvu mašle.
 
