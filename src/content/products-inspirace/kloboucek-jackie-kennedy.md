@@ -14,4 +14,5 @@ images:
   - /assets/images/uploads/IMG_E0708.JPG
   - /assets/images/uploads/IMG_E0713.JPG
   - /assets/images/uploads/IMG_0775.JPG
+  - /assets/images/uploads/IMG_0715.JPG
 ---
