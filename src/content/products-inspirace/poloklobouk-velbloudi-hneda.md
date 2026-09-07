@@ -1,5 +1,5 @@
 ---
-name: POLOKLOBOUK VELBLOUDÍ HNĚDÁ
+name: POLOKLOBOUK HANA VELBLOUDÍ HNĚDÁ
 desc: Malý plstěný klobouček je vyroben z upcyklované plsti ze staršího klobouku. Materiál byl vyčištěn a vypnut na novou formu. Po dohodě mohu vyrobit i z jiné barvy plsti. K uchycení má zespodu hřebínek, pomocí kterého perfektně drží v účesu. Po dohodě též mohu doplnit kloboukovou gumou v barvě Vašich vlasů. Velikostně sedí na obvod 54-60 cm. Foceno na obvodu 58 cm. Každodenní nošení i slavnostní příležitost.
 desc1: ''
 desc2: ''
