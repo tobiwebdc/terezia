@@ -6,9 +6,12 @@ desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: Vínová
 material: 10% vlna, 90%polyester
-size: jkh
-price: 2400 Kč
+size: vhodný pro střední a větší hlavu
+price: 2300 Kč
 sold: true
 visible: true
-images: []
+images:
+  - /assets/images/uploads/KVKH4128.JPG
+  - /assets/images/uploads/CXBB5370.JPG
+  - /assets/images/uploads/KHXE2618.JPG
 ---
