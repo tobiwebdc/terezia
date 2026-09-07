@@ -10,7 +10,7 @@ type: Každodenní nošení i slavnostní příležitosti
 color: krémová
 material: králičí plsť
 size: Vhodný od obvodu 58. Pro menší obvody dle domluvy. Foceno na obvodu 58 cm.
-price: od 3500 Kč, viz popis
+price: od 3000 Kč, viz popis
 sold: true
 visible: true
 images:
