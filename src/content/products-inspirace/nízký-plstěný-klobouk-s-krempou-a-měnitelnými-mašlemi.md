@@ -13,5 +13,10 @@ size: Vhodný od obvodu 58. Pro menší obvody dle domluvy. Foceno na obvodu 58 
 price: od 3500 Kč, viz popis
 sold: true
 visible: true
-images: []
+images:
+  - /assets/images/uploads/IMG_7720.JPG
+  - /assets/images/uploads/IMG_7528.JPG
+  - /assets/images/uploads/IMG_9697.JPG
+  - /assets/images/uploads/IMG_E0403.JPG
+  - /assets/images/uploads/IMG_E2176.JPG
 ---
