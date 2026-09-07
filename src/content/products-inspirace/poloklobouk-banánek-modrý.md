@@ -10,5 +10,7 @@ size: Vhodný pro všechny velikosti, skvěle sedí každému.
 price: 1800 Kč
 sold: true
 visible: true
-images: []
+images:
+  - /assets/images/uploads/IMG_7275.JPG
+  - /assets/images/uploads/IMG_7284.JPG
 ---
