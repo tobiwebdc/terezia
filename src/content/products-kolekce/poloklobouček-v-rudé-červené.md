@@ -11,10 +11,9 @@ price: 2400 Kč
 sold: false
 visible: true
 images:
-  - /assets/images/uploads/IMG_9280.JPG
-  - /assets/images/uploads/IMG_0120.JPG
-  - /assets/images/uploads/IMG_0114.JPG
-  - /assets/images/uploads/SFDC4245.JPG
-  - /assets/images/uploads/XDPS0073.JPG
-  - /assets/images/uploads/IMG_0780.JPG
+  - /assets/images/uploads/IMG_0117.jpg
+  - /assets/images/uploads/IMG_9280.jpg
+  - /assets/images/uploads/IMG_0780.jpg
+  - /assets/images/uploads/XDPS0073.jpg
+  - /assets/images/uploads/IMG_0119.jpg
 ---
