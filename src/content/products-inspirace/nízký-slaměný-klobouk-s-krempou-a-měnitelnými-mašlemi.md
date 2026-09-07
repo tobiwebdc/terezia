@@ -9,9 +9,10 @@ desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: růžová/ přírodní
 material: papírová sláma
-size: od ve. 58
+size: Vhodný od obvodu 58. Pro menší obvody dle domluvy. Foceno na obvodu 58 cm.
 price: 2700 Kč
 sold: true
 visible: true
-images: []
+images:
+  - /assets/images/uploads/IMG_9374.webp
 ---
