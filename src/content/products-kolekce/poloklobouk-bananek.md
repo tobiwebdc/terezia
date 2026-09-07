@@ -11,6 +11,10 @@ price: 1800 Kč
 sold: false
 visible: true
 images:
+  - /assets/images/uploads/20240606_065153.webp
+  - /assets/images/uploads/DSC_5114[1].webp
+  - /assets/images/uploads/received_514933287846459.webp
   - /assets/images/uploads/DRQR2433.JPG
-  - /assets/images/uploads/TQBN7889.JPG
+  - /assets/images/uploads/DSC_5164[1].webp
+  - /assets/images/uploads/DSC_5117.JPG
 ---
