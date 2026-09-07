@@ -19,4 +19,5 @@ images:
   - /assets/images/uploads/IMG_9697.JPG
   - /assets/images/uploads/IMG_E0403.JPG
   - /assets/images/uploads/IMG_E2176.JPG
+  - /assets/images/uploads/IMG_9999.JPG
 ---
