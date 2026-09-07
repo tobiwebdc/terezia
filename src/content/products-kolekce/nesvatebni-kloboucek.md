@@ -1,5 +1,5 @@
 ---
-name: '"NESVATEBNÍ" KLOBOUČEK'
+name: NESVATEBNÍ KLOBOUČEK
 desc: Krásný malý klobouček z králičí plsti v barvě slonová kost je vyroben z recyklovaného materiálu kvalitní králičí plsti. Nejlépe se hodí na menší obvody hlavy 51-55, takže padne dospělé ženě i malé slečně.
 desc1: ''
 desc2: ''
