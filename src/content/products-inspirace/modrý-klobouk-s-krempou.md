@@ -10,5 +10,7 @@ size: vhodný pro střední a větší hlavu
 price: 3000,- Kč
 sold: true
 visible: true
-images: []
+images:
+  - /assets/images/uploads/DSC_0631.JPG
+  - /assets/images/uploads/DSC_0635.JPG
 ---
