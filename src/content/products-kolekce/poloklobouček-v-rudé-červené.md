@@ -12,4 +12,5 @@ sold: false
 visible: true
 images:
   - /assets/images/uploads/IMG_0117.jpg
+  - /assets/images/uploads/IMG_0118.jpg
 ---
