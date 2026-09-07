@@ -10,5 +10,7 @@ size: Vhodný pro všechny velikosti
 price: 3500 Kč
 sold: true
 visible: true
-images: []
+images:
+  - /assets/images/uploads/IMG_E1105.JPG
+  - /assets/images/uploads/IMG_E1107.JPG
 ---
