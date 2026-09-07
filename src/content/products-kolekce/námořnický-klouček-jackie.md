@@ -1,5 +1,5 @@
 ---
-name: NÁMOŘNICKÝ KLOUČEK JACKIE
+name: NÁMOŘNICKÝ KLOBOUČEK JACKIE
 desc: |-
   Malý plstěný klobouček ve stylu Jackie Kennedy. V tmavé modré barvě z králičí plsti s mašlí ze stejného materiálu dozdobeny sametovým páskem. Se skvělým detailem kovového kormidla.
 
