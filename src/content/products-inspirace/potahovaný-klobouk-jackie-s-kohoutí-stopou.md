@@ -19,4 +19,6 @@ images:
   - /assets/images/uploads/IMG_E7923.JPG
   - /assets/images/uploads/IMG_7963.JPG
   - /assets/images/uploads/WDOB5178.JPG
+  - /assets/images/uploads/IMG_7973.JPG
+  - /assets/images/uploads/IMG_7965.JPG
 ---
