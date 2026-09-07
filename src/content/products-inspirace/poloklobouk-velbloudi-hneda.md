@@ -14,5 +14,4 @@ images:
   - /assets/images/uploads/IMG_1431.WEBP
   - /assets/images/uploads/IMG_1430.JPG
   - /assets/images/uploads/IMG_0047.JPG
-  - /assets/images/uploads/IMG_0109.JPG
 ---
