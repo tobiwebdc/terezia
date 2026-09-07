@@ -1,5 +1,5 @@
 ---
-name: ČERVENÝ KLOBOUČEK TEREUA SE ZÁVOJEM
+name: ČERVENÝ KLOBOUČEK TEREZA SE ZÁVOJEM
 desc: |-
   Malý červený klobouček se závojem se nosí mírně na stranu zajištěný kloboukovou gumou podvlečenou zezadu pod vlasy.
 
