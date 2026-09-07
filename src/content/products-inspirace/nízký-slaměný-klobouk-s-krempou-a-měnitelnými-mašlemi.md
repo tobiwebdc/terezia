@@ -17,4 +17,7 @@ images:
   - /assets/images/uploads/IMG_9374.webp
   - /assets/images/uploads/IMG_E9548.JPG
   - /assets/images/uploads/IMG_E9516.JPG
+  - /assets/images/uploads/IMG_9462.JPG
+  - /assets/images/uploads/IMG_0102.JPG
+  - /assets/images/uploads/IMG_0103.JPG
 ---
