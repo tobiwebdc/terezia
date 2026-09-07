@@ -21,4 +21,6 @@ images:
   - /assets/images/uploads/IMG_0390.JPG
   - /assets/images/uploads/IMG_0376.JPG
   - /assets/images/uploads/IMG_0395.JPG
+  - /assets/images/uploads/IMG_0370.JPG
+  - /assets/images/uploads/IMG_0372.JPG
 ---
