@@ -1,5 +1,5 @@
 ---
-name: SLAMĚNÝ KLOBOUČEK S PROUŽKEM
+name: SLAMĚNÝ KLOBOUČEK JACKIE S PROUŽKEM
 desc: Malý slaměný klobouček s mašlí je vyroben z upcyklovaného materiálu ze staršího klobouku. Materiál byl vyčištěn a vypnut na novou formu. Ozdobený je mašlí ze stejného materiálu. K uchycení má zespodu dva hřebínky, pomocí kterých perfektně drží v účesu. Po dohodě též mohu doplnit kloboukovou gumou v barvě Vašich vlasů. Velikostně sedí na obvod hlavy 56-60 cm. Foceno na obvodu 58 cm.
 desc1: ''
 desc2: ''
