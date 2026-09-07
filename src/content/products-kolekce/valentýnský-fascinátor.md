@@ -21,4 +21,5 @@ images:
   - /assets/images/uploads/IMG_E1160.JPG
   - /assets/images/uploads/LABJ7967.JPG
   - /assets/images/uploads/IMG_1180.JPG
+  - /assets/images/uploads/IMG_E1168.JPG
 ---
