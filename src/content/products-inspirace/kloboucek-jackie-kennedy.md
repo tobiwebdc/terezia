@@ -7,7 +7,7 @@ type: Každodenní nošení, slavnostní příležitosti
 color: krémová
 material: 100% králičí plsť
 size: Vhodný středně velkou a velkou hlavu. Foceno na obvodu 58 (tamavovláska) cm,
-price: 2400 Kč, prodáno, na přání mohu vyrobit obdobný
+price: 2400 Kč
 sold: true
 visible: true
 images:
