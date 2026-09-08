@@ -1,5 +1,5 @@
 ---
-name: KLOBOUk EVA S MAŠLÍ A PEREM
+name: KLOBOUK EVA S MAŠLÍ A PEREM
 desc: Malý plstěný klobouček v tmavě modré barvě se saténovou mašlí a perem.
 desc1: |-
   Vyrábím klobouky na principu upcyklace-ze starého nové. Starý klobouk vyčistím a vypnu na novou formu a vznikne tak zcela nový model.
