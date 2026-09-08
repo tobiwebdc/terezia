@@ -12,9 +12,7 @@ sold: false
 visible: true
 images:
   - /assets/images/uploads/DSC_0699.webp
-  - /assets/images/uploads/20240508_130409.webp
   - /assets/images/uploads/20240512_161208.webp
-  - /assets/images/uploads/20240508_130429.webp
   - /assets/images/uploads/20240512_161045-2.webp
   - /assets/images/uploads/DSC_0695.webp
   - /assets/images/uploads/IMG_20240825_165648_835.webp
