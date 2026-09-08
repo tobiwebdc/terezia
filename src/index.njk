@@ -36,9 +36,9 @@ permalink: /index.html
     <div class="deco-frame p-2">
       <div class="aspect-[3/4] bg-sage/40 flex flex-col items-center justify-center text-ink gap-4 overflow-hidden">
         {% if about.image %}
-          <img src="{{ about.image | url }}" alt="{{ about.heading }}" class="w-full h-full object-cover">
+          <img src="{{ about.image | url }}" alt="{{ about.heading }}" class="w-full h-full object-cover"  eleventy:pictureattr:class="block w-full h-full">
         {% else %}
-          <img src="{{ '/assets/favicon.svg' | url }}" class="w-16 h-16 text-coral" alt="">
+          <img src="{{ '/assets/favicon.svg' | url }}" class="w-16 h-16 text-coral" alt="" eleventy:ignore>
           <p class="label-caps text-ink/60 text-center px-8">Portrét ateliéru<br/>doplníme fotografií</p>
         {% endif %}
       </div>

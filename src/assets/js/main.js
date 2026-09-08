@@ -125,6 +125,43 @@
     }
   }
 
+  function renderThumbs() {
+    thumbsWrap.innerHTML = "";
+    if (currentImages.length <= 1) return;
+    currentImages.forEach(function (entry, i) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className =
+        "w-14 h-14 shrink-0 border overflow-hidden transition-colors " +
+        (i === currentIndex ? "border-coral" : "border-ink/10");
+      btn.setAttribute("aria-label", "Fotka " + (i + 1));
+      var img = document.createElement("img");
+      img.src = entry.thumb;
+      img.loading = "lazy";
+      img.alt = "";
+      img.className = "w-full h-full object-cover";
+      btn.appendChild(img);
+
+      btn.addEventListener("mouseenter", function () {
+        mainImg.src = entry.full;
+      });
+      btn.addEventListener("mouseleave", function () {
+        mainImg.src = currentImages[currentIndex].full;
+      });
+      btn.addEventListener("click", function () {
+        setIndex(i);
+      });
+      thumbsWrap.appendChild(btn);
+    });
+  }
+
+  function setIndex(i) {
+    if (currentImages.length === 0) return;
+    currentIndex = (i + currentImages.length) % currentImages.length;
+    mainImg.src = currentImages[currentIndex].full;
+    renderThumbs();
+  }
+
   window.addEventListener("popstate", function () {
     if (isModalOpen) closeModal(true);
   });

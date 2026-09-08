@@ -24,7 +24,7 @@
   <header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-cream/95 border-b border-coral/20 transition-shadow duration-300">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
     <a href="{{ '/' | url }}" class="flex items-center gap-2 text-coral">
-      <img src="{{ '/assets/favicon.svg' | url }}" class="w-6 h-6">
+      <img src="{{ '/assets/favicon.svg' | url }}" class="w-6 h-6" eleventy:ignore>
       <span class="font-script text-xl">Klobouky Terezia</span>
     </a>
 
@@ -120,7 +120,7 @@
 
     <div class="flex flex-col items-center sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-center justify-items-center gap-2 label-caps text-xs">
       <span class="text-nowrap sm:justify-self-end">{{ footer.text }}</span>
-      <img src="{{ '/assets/favicon.svg' | url }}" height="24" width="24" class="w-5 h-5 text-coral">
+      <img src="{{ '/assets/favicon.svg' | url }}" height="24" width="24" class="w-5 h-5 text-coral" eleventy:ignore>
       <span class="text-nowrap sm:justify-self-start">© {{ currentYear }} {{ hero.title }}</span>
     </div>
   

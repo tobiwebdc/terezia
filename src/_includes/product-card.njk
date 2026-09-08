@@ -3,18 +3,24 @@
 {% set m = v[idx % 3] %}
 {% set t1 = v[(idx + 1) % 3] %}
 {% set t2 = v[(idx + 2) % 3] %}
+
 {% if product.images and product.images.length > 0 %}
-  {% set rawImgList = [] %}
-  {% for imgPath in product.images %}
-    {% set rawImgList = (rawImgList.push(imgPath), rawImgList) %}
-  {% endfor %}
+  {% set hasRealImages = true %}
+  {% set rawImgList = product.images %}
+  {% set modalImages = product.modalImages %}
 {% else %}
-  {% set rawImgList = ["/assets/images/placeholders/placeholder-" + m + ".svg", "/assets/images/placeholders/placeholder-" + t1 + ".svg", "/assets/images/placeholders/placeholder-" + t2 + ".svg"] %}
+  {% set hasRealImages = false %}
+  {% set rawImgList = [
+    "/assets/images/placeholders/placeholder-" + m + ".svg",
+    "/assets/images/placeholders/placeholder-" + t1 + ".svg",
+    "/assets/images/placeholders/placeholder-" + t2 + ".svg"
+  ] %}
+  {% set modalImages = [] %}
+  {% for p in rawImgList %}
+    {% set modalImages = (modalImages.push({ thumb: (p | url), full: (p | url) }), modalImages) %}
+  {% endfor %}
 {% endif %}
-{% set imgList = [] %}
-{% for rawImg in rawImgList %}
-  {% set imgList = (imgList.push(rawImg | url), imgList) %}
-{% endfor %}
+
 {% set modalData = {
   "name": product.name,
   "desc": product.desc,
@@ -27,21 +33,41 @@
   "size": product.size,
   "sold": sold
 } %}
-<div class="product-card" data-images='{{ imgList | dump | safe }}'>
+
+<div class="product-card" data-images='{{ modalImages | dump | safe }}'>
   <script type="application/json" class="product-data">{{ modalData | dump | safe }}</script>
 
   <button type="button" class="product-img-btn group block w-full aspect-[4/5] overflow-hidden border border-ink/10 relative" data-index="0">
-    <img src="{{ imgList[0] }}" alt="{{ product.name }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+    {% if hasRealImages %}
+    <img
+      src="{{ rawImgList[0] }}"
+      alt="{{ product.name }}"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      eleventy:pictureattr:class="block w-full h-full"
+      {% if idx == 0 %}loading="eager" fetchpriority="high"{% endif %}
+    />
+    {% else %}
+    <img
+      src="{{ rawImgList[0] | url }}"
+      alt="{{ product.name }}"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      eleventy:ignore
+    />
+    {% endif %}
     {% if sold %}
     <span class="absolute top-3 left-3 label-caps bg-ink/80 text-cream px-3 py-1">Prodáno</span>
     {% endif %}
   </button>
 
   <div class="flex gap-2 mt-2">
-    {% for img in imgList %}
+    {% for img in rawImgList %}
       {% if loop.index0 > 0 and loop.index0 < 3 %}
       <button type="button" class="product-img-btn w-14 h-14 border border-ink/10 overflow-hidden" data-index="{{ loop.index0 }}">
-        <img src="{{ img }}" alt="" class="w-full h-full object-cover" />
+        {% if hasRealImages %}
+        <img src="{{ img }}" alt="" class="w-full h-full object-cover" eleventy:widths="120" eleventy:formats="webp" />
+        {% else %}
+        <img src="{{ img | url }}" alt="" class="w-full h-full object-cover" eleventy:ignore />
+        {% endif %}
       </button>
       {% endif %}
     {% endfor %}
