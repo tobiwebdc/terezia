@@ -1,5 +1,5 @@
 ---
-name: Beruškový klobouk s krempou
+name: BERUŠKOVÝ KLOBOUK S KREMPOU
 desc: Nízký klobouk s krempou a puntíkatým tylem
 desc1: Klobouček má vespodu dva kovové hřebínky k přichycení k účesu. V případě zájmu možné po domluvě doplnit kloboukovou gumu. Nosí se mírně na stranu nebo jak se Vám bude líbit. Jedná se o upcyklaci materiálu ze staršího klobouku. Díky tomu vzniká ekologicky něco krásného a za příznivou cenu.
 desc2: ''
