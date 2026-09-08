@@ -14,7 +14,6 @@ sold: true
 visible: true
 images:
   - /assets/images/uploads/IMG_9138.JPG
-  - /assets/images/uploads/IMG_9144.JPG
   - /assets/images/uploads/IMG_9158.JPG
   - /assets/images/uploads/IMG_9119.JPG
   - /assets/images/uploads/IMG_9115.JPG
