@@ -1,7 +1,7 @@
 ---
 name: KLOBOUČEK DVOUKVÍTEK
 desc: Malý plstěný klobouček ve vínové barvě se dvěma květy. Nosí se mírně na stranu nebo jak se Vam bude líbit. Jedná se o upcyklaci materiálu ze staršího klobouku. Díky tomu vzniká ekologicky něco krásného a za příznivou cenu.
-desc1: ''
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: Vínová
