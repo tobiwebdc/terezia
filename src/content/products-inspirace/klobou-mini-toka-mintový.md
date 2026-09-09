@@ -1,7 +1,7 @@
 ---
-name: KLOBOU MINI TOKA MINTOVÝ
+name: KLOBOUK MINI TOKA MINTOVÝ
 desc: Krásný klobouček inspirovaný modely z 50. let je vyroben z recyklované králičí plsti. Zespodu má dva hřebínky, kterými se přichytí k účesu. Tento klobouček typu toka se nosí vzadu na temeni hlavy ve stylu Jackie Kennedyové. Ozdoben je velkou mašlí ze stejného materiálu broušenými kamínky, recyklovanými se staršího šperku
-desc1: ''
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení, slavnostní příležitosti
 color: mint
