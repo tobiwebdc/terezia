@@ -1,7 +1,7 @@
 ---
 name: HNĚDÝ PUNTÍKOVANÝ KLOBOUK
 desc: Klobouček v hnědé barvě zdobený látkou s puntíky. Nosí se mírně na stranu nebo jak se Vám bude líbit. Jedná se o upcyklaci materiálu ze staršího klobouku. Díky tomu vzniká ekologicky něco krásného a za příznivou cenu.
-desc1: ''
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: hnědá
