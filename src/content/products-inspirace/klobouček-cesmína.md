@@ -1,7 +1,7 @@
 ---
 name: KLOBOUČEK CESMÍNA
 desc: Malý plstěný klobouček ve fialové barvě ozdobený jedním květem z plstěných listů cesmíny. Nosí se mírně na stranu nebo jak se Vám bude líbit. Jedná se o upcyklaci materiálu ze staršího klobouku. Díky tomu vzniká ekologicky něco krásného a za příznivou cenu.
-desc1: ''
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: fialová
