@@ -1,7 +1,7 @@
 ---
 name: KLOBOUČEK JACKIE ČERVENÝ VELUROVÝ
 desc: Krásný poloklobouček inspirovaný modely z 50. let je vyroben z recyklované králičí plsti. Je červený v barvě sušených rajčat a struktura je lehce s chlupem. Zespodu má dva hřebínky, kterými se přichytí k účesu. Tento klobouček typu toka se nosí buď vzadu na temeni hlavy ve stylu Jackie Kennedyové nebo nahoře mírně na stranu. Ozdoben je velkou mašlí ze stejného materiálu.
-desc1: ''
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení, slavnostní příležitostiv
 color: červená
