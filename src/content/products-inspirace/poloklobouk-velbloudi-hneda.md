@@ -7,7 +7,7 @@ type: Každodenní nošení i slavnostní příležitosti
 color: velbloudí hnědá
 material: 100% vlna
 size: Vhodný pro všechny velikosti, foceno mám na obvodu hlavy 58 cm
-price: 2400 Kč, prodáno, na přání mohu vyrobit obdobný
+price: 2400 Kč
 sold: true
 visible: true
 images:
