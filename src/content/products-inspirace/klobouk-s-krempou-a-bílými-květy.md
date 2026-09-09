@@ -2,7 +2,7 @@
 name: KLOBOUK S KREMPOU A BÍLÝMI KVĚTY
 desc: Krásný klobouk s kulatou korunou a širokou krempou.
 desc1: Klobouček má vespodu dva kovové hřebínky k přichycení k účesu. V případě zájmu možné po domluvě doplnit kloboukovou gumu. Nosí se mírně na stranu nebo jak se Vám bude líbit. V tomto případě jsem použila nový materiál, proto je cena vyšší než u ostatních klobouků*
-desc2: ''
+desc2: Po dohodě mohu vyrobit i pro Vás.
 type: Každodenní nošení i slavnostní příležitosti
 color: azurová
 material: králičí plsť
