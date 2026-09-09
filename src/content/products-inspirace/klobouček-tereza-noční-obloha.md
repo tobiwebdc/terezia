@@ -4,7 +4,7 @@ desc: |-
   Malý klobouček z plsti v černé barvě se sametovou mašlí s drobným vzorem komet. Vyrábím klobouky na principu upcyklace, tedy používám starší už nenositelné klobouky a použiji jejich materiál na výrobu nového modelu. Materiál byl vyčištěn a vypnut na novou formu.
 
   Klobouček je zespodu opatřen dvěma hřebínky, díky čemuž bezvadně drží na hlavě. Dle přání mohu doplnit kloboukovou gumu v barvě vlasů.
-desc1: ''
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: černá + bílý vzor na mašli
