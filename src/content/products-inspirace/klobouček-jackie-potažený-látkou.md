@@ -4,7 +4,7 @@ desc: Krásný mini klobouček potažený látkou a s mašlí.
 desc1: |-
   Vyroben z recyklované plsti v duchu udržitelné módy. Potažen je látkou s oblíbeným vzorem.
   Klobouček se nosí vzadu na temeni hlavy nebo více vpředu a nastranu. Uchycení k účesu pomocí dvou hřebínků nebo mohu dodat kloboukovou gumu v barvě Vašich vlasů.
-desc2: ''
+desc2: Po dohodě mohu vyrobit i pro Vás.
 type: Každodenní nošení i slavnostní příležitosti
 color: modrá, červená, žlutá
 material: králičí plsť
