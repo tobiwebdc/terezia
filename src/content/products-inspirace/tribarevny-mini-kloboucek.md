@@ -14,7 +14,7 @@ type: Každodenní nošení i slavnostní příležitosti
 color: rezavě červená, tmave zelena, krémová
 material: vlněná a kraličí plsť
 size: Vhodný pro všechny obvody hlavy
-price: 2100 Kč, prodáno, na přání mohu vyrobit obdobný
+price: 2100 Kč
 sold: true
 visible: true
 images:
