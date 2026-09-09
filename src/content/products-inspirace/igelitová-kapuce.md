@@ -1,7 +1,7 @@
 ---
 name: IGELITOVÁ KAPUCE
 desc: Vytvořila jsem tuto retro kapuci jako ochranu kloboučku před nečekaným deštěm. Nosily se převážně v 50. a 60. letech
-desc1: ''
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: za deště
 color: transparentní, bílá
