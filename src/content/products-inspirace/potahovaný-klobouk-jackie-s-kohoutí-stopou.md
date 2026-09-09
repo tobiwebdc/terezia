@@ -6,12 +6,12 @@ desc: |-
   Je vyroben z recyklované plsti a látky v duchu udržitelné módy.
 
   Klobouček se nosí vzadu na temeni hlavy nebo více vpředu a nastranu. Uchycení k účesu pomocí dvou hřebínků nebo mohu dodat kloboukovou gumu v barvě Vašich vlasů.
-desc1: ''
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: bílá, černá, modrá, červená
 material: vlněná plsť
-size: Vhodný od velikosti 56, foceno na obvodu hlavy 58 cm
+size: Vhodný od velikosti 56, foceno na obvodu hlavy 58 cm.
 price: '3100'
 sold: true
 visible: true
