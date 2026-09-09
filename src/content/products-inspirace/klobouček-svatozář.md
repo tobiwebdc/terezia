@@ -2,7 +2,7 @@
 name: KLOBOUČEK SVATOZÁŘ
 desc: Malý kruhový klobouček s mašlí v tmavě modré barvě
 desc1: Malý kruhový klobouček se nosí vzadu na temeni hlavy. Aby perfektně držel v účesu má dva kovové hřebínky, které ho dokonale zajistí a udrží na svém místě. Jedná se o upcyklaci materiálu ze staršího klobouku. Díky tomu vzniká ekologicky něco krásného a za příznivou cenu.
-desc2: ''
+desc2: Po dohodě mohu vyrobit i pro Vás.
 type: Každodenní nošení i slavnostní příležitosti
 color: modrá
 material: vlna a umělá plsť
