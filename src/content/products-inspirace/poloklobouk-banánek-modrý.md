@@ -1,7 +1,7 @@
 ---
 name: POLOKLOBOUK "BANÁNEK" MODRÝ
-desc: Krásný poloklobouček inspirovaný modely z 50. let je vyroben z recyklované králičí plsti (materiál Tonak). Má barvu slonové kosti a je ozdoben kvítky, lístky a perličkami. Zespodu má dva malé hřebínky, kterými se přichytí k účesu.
-desc1: ''
+desc: Krásný poloklobouček inspirovaný modely z 50. let je vyroben z recyklované králičí plsti. Zespodu má dva malé hřebínky, kterými se přichytí k účesu.
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení, slavnostní příležitosti i pro nevěstu
 color: modrá, béžová
