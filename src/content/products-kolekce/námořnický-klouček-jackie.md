@@ -1,9 +1,6 @@
 ---
 name: NÁMOŘNICKÝ KLOBOUČEK JACKIE
-desc: |-
-  Malý plstěný klobouček ve stylu Jackie Kennedy. V tmavé modré barvě z králičí plsti s mašlí ze stejného materiálu dozdobeny sametovým páskem. Se skvělým detailem kovového kormidla.
-
-  Hodí se na všechny obvody obvod hlavy, foceno na obvodu 58 cm.
+desc: Malý plstěný klobouček ve stylu Jackie Kennedy. V tmavé modré barvě z králičí plsti s mašlí ze stejného materiálu dozdobeny sametovým páskem. Se skvělým detailem kovového kormidla.
 desc1: |-
   Vyrábím klobouky na principu upcyklace-ze starého nové. Starý klobouk vyčistím a vypnu na novou formu a vznikne tak zcela nový model. 
   Klobouček se nosí vzadu na temeni hlavy nebo více vpředu a nastranu Drží díky dvěma hřebínkům. Na přání muhu přidat i kloboukovou gumu.
