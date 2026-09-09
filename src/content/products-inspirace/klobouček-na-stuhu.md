@@ -2,7 +2,7 @@
 name: KLOBOUČEK NA STUHU
 desc: Malý klobouček z plsti ve fialové barvě se zavazováním na stuhu.
 desc1: Klobouček je vyrobený ze zbytkového materiálu, proto má uprostřed šev, který je elegantně skrytý stuhou, kterou se i zajistí na hlave pod účesem. Nosí se mírně na stranu nebo jak se Vám bude líbit. Jedná se o upcyklaci materiálu ze staršího klobouku. Díky tomu vzniká ekologicky něco krásného a za příznivou cenu.
-desc2: ''
+desc2: Po dohodě mohu vyrobit i pro Vás.
 type: Každodenní nošení i slavnostní příležitosti
 color: fialová
 material: vlněná plsť
