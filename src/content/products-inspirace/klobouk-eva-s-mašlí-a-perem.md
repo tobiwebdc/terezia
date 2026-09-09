@@ -4,7 +4,7 @@ desc: Malý plstěný klobouček v tmavě modré barvě se saténovou mašlí a 
 desc1: |-
   Vyrábím klobouky na principu upcyklace-ze starého nové. Starý klobouk vyčistím a vypnu na novou formu a vznikne tak zcela nový model.
   Klobouček nosí mírně na stranu a drží díky hřebínku. Na přání muhu přidat i kloboukovou gumu.
-desc2: ''
+desc2: Po dohodě mohu vyrobit i pro Vás.
 type: Každodenní nošení i slavnostní příležitosti
 color: tmavě modrá
 material: králičí plsť
