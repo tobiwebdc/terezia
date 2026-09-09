@@ -1,13 +1,8 @@
 ---
 name: VALENTÝNSKÝ FASCINÁTOR
 desc: |-
-  Kulatý fascinátor z červené plsti a tylovou mašlí se srdíčky. Připíná se pomoci všité sponky a mašle, která se uváže zezadu pod vlasy.
-
-  Jak už je u mě zvykem, jedná se o recyklaci materiálu ze staršího klobouku.
-
-  Jodi se na všechny velikosti, foceno na obvodu hlavy 58 cm.
-
-  jako dárek přidávám plstěnou brož ve tvaru mašle.
+  Kulatý fascinátor z červené plsti a tylovou mašlí se srdíčky. Připíná se pomoci všité sponky a mašle, která se uváže zezadu pod vlasy. Jak už je u mě zvykem, jedná se o recyklaci materiálu ze staršího klobouku.
+  Jako dárek přidávám plstěnou brož ve tvaru mašle.
 desc1: ''
 desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
