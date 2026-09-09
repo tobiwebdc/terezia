@@ -4,7 +4,7 @@ desc: |-
   Malý červený klobouček se závojem se nosí mírně na stranu zajištěný kloboukovou gumou podvlečenou zezadu pod vlasy.
 
   Tvořím na principu upcyklace, což znamená, že recykluji materiál staršího klobouku a tvořím z něj zcela nový model.
-desc1: Každodenní nošení i slavnostní příležitosti
+desc1: Po dohodě mohu vyrobit i pro Vás.
 desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: červená
