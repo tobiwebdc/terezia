@@ -7,7 +7,7 @@ type: Každodenní nošení i slavnostní příležitosti
 color: modrá
 material: vlna a umělá plsť
 size: vhodný pro střední a větší hlavu
-price: 3000,- Kč
+price: 3000 Kč
 sold: true
 visible: true
 images:
