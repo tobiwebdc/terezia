@@ -7,7 +7,7 @@ type: Každodenní nošení i slavnostní příležitosti
 color: přírodní béžová
 material: sláma
 size: Vhodný pro všechny velikosti hlavy, doporučuji převážně pro menší a střední velikost. Foceno na obvodu 58 cm.
-price: '2400'
+price: 2400 Kč
 sold: true
 visible: true
 images:
