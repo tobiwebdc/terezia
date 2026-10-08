@@ -8,7 +8,7 @@ color: červená rudá
 material: 100% vlna
 size: Vhodný pro všechny velikosti, skvěle sedí každému, foceno na obvodu hlavy 56 a 58 cm.
 price: 2400 Kč
-sold: false
+sold: true
 visible: true
 images:
   - /assets/images/uploads/IMG_0117.jpg
