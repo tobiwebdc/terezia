@@ -1,5 +1,5 @@
 ---
-name: Poloklobouk Marie béžovo azurový
+name: POLOKLOBOUK MARIE KRÉMOVO AZUROVÝ
 desc: Malý plstěný klobouček je z králičí plsti. Krémový základ se zajímavým prostřihem je ozdoben plstěnou mašlí v azurové barvě.
 desc1: |-
   Vyrábím klobouky na principu upcyklace-ze starého nové. Starý klobouk vyčistím a vypnu na novou formu a vznikne tak zcela nový model. 
