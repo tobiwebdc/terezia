@@ -15,5 +15,8 @@ size: Velikostně sedí na obvod 51-58 cm.
 price: 2500 Kč
 sold: true
 visible: true
-images: []
+images:
+  - /assets/images/uploads/IMG_E3687.JPG
+  - /assets/images/uploads/IMG_E3691.JPG
+  - /assets/images/uploads/IMG_E3683.JPG
 ---
