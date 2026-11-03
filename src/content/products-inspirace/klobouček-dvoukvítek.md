@@ -7,7 +7,7 @@ type: Každodenní nošení i slavnostní příležitosti
 color: Vínová
 material: 10% vlna, 90%polyester
 size: vhodný pro střední a větší hlavu
-price: 2300 Kč
+price: 2400 Kč
 sold: true
 visible: true
 images:
