@@ -1,9 +1,11 @@
 ---
-name: NÁMOŘNICKÝ KLOBOUČEK JACKIE
+name: NÁMOŘNICKÝ KLOBOUČEK JACKIE II
 desc: Malý plstěný klobouček ve stylu Jackie Kennedy. V tmavé modré barvě z králičí plsti s mašlí ze stejného materiálu dozdobeny sametovým páskem. Se skvělým detailem kovového kormidla.
 desc1: |-
   Vyrábím klobouky na principu upcyklace-ze starého nové. Starý klobouk vyčistím a vypnu na novou formu a vznikne tak zcela nový model. 
   Klobouček se nosí vzadu na temeni hlavy nebo více vpředu a nastranu Drží díky dvěma hřebínkům. Na přání muhu přidat i kloboukovou gumu.
+
+  Klobouky z formy Jackie II mají klenutější korunu, takže oproti původní formě sedí i menším velikostem.
 desc2: ''
 type: Každodenní nošení i slavnostní příležitosti
 color: modrá a vínová
