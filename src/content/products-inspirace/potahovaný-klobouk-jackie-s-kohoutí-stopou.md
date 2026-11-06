@@ -1,5 +1,5 @@
 ---
-name: POTAHOVANÝ KLOBOUK JACKIE S KOHOUTÍ STOPOU
+name: KLOBOUČEK JACKIE POTAŽENÝ LÁTKOU S KOHOUTÍ STOPOU
 desc: |-
   Krásný mini klobouček potažený látkou ve vzoru kohouti stopa. S různými mašlemi na výměnu.
 
