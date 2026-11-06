@@ -1,5 +1,5 @@
 ---
-name: KLOBOUK JACKIE FIALOVÝ
+name: KLOBOUČEK JACKIE FIALOVÝ
 desc: |-
   Krásný poloklobouček inspirovaný modely z 50. let je vyroben z recyklované králičí plsti. Zespodu má dva hřebínky, kterými se přichytí k účesu. Tento klobouček typu toka se nosí buď vzadu na temeni hlavy ve stylu Jackie Kennedyové nebo nahoře mírně na stranu. Ozdoben je velkou mašlí ze stejného materiálu.
 
